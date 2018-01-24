@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidRepos.iml" filepath="$PROJECT_DIR$/DroidRepos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" filepath="$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" />
     </modules>
   </component>
 </project>
