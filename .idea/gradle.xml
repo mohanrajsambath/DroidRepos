@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/camerasurfvw_02" />
+            <option value="$PROJECT_DIR$/runtimepermissions" />
             <option value="$PROJECT_DIR$/surfaceviewcamerarecording" />
           </set>
         </option>
