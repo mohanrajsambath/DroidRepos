@@ -1,4 +1,4 @@
-package com.surfaceviewcamerarecording;
+package com.surfaceviewcamerarecording.activity;
 
 import android.hardware.Camera;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ToggleButton;
+
+import com.surfaceviewcamerarecording.R;
 
 import java.io.IOException;
 
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         imgVw_recording = (ImageView) findViewById(R.id.imgVw_recording);
         imgVw_recording.setOnClickListener(this);
 
+        //mCamera(true);
+       // public void setRecordingHint(boolean hint) {
+            //set(KEY_RECORDING_HINT, hint ? TRUE : FALSE);
+        //}
     }
 
     /* Init the MediaRecorder, the order the methods are called is vital to
@@ -51,12 +57,9 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private void initRecorder(Surface surface) throws IOException {
         // It is very important to unlock the camera before doing setCamera
         // or it will results in a black preview
-        if(mCamera == null) {
-            mCamera = android.hardware.Camera.open();
-            mCamera.unlock();
-        }
 
-        if(mMediaRecorder == null)  mMediaRecorder = new MediaRecorder();
+        if(mMediaRecorder == null)
+        mMediaRecorder = new MediaRecorder();
         mMediaRecorder.setPreviewDisplay(surface);
         mMediaRecorder.setCamera(mCamera);
 
@@ -92,7 +95,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
 
     @Override
-    public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+    public void surfaceChanged(SurfaceHolder holder,int format, int width,int height) {
+
+
+
 
     }
 

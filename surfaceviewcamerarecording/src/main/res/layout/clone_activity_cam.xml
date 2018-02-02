@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".activity.Clone_MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlPreview_clone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/sbZoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+
+        <FrameLayout
+            android:id="@+id/flControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="7dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:onClick="startRecording"
+                    android:background="@color/transparent"
+                    android:src="@drawable/record" />
+                <!--android:onClick="captureClick"-->
+                <TextView
+                    android:id="@+id/textCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Record"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivGallery"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/typefaceTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

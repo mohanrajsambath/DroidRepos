@@ -1,1 +1,1 @@
-include ':app', ':surfaceviewcamerarecording'
+include ':app', ':surfaceviewcamerarecording', ':camerasurfvw_02'
