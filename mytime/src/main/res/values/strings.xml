@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyTime</string>
+    <string name="format_24">hh:mm:ss a  EEE MMM d</string>
 </resources>
