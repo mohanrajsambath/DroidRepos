@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidRepos.iml" filepath="$PROJECT_DIR$/DroidRepos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-notes-app/android-notes-app.iml" filepath="$PROJECT_DIR$/android-notes-app/android-notes-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aws/aws.iml" filepath="$PROJECT_DIR$/aws/aws.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" filepath="$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm/hrm.iml" filepath="$PROJECT_DIR$/hrm/hrm.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytime/mytime.iml" filepath="$PROJECT_DIR$/mytime/mytime.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" filepath="$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" filepath="$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" />

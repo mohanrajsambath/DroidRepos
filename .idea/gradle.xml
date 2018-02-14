@@ -8,8 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-notes-app" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/aws" />
             <option value="$PROJECT_DIR$/camerasurfvw_02" />
+            <option value="$PROJECT_DIR$/hrm" />
             <option value="$PROJECT_DIR$/mytime" />
             <option value="$PROJECT_DIR$/runtimepermissions" />
             <option value="$PROJECT_DIR$/surfaceviewcamerarecording" />

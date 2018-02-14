@@ -1,1 +1,1 @@
-include ':app', ':surfaceviewcamerarecording', ':camerasurfvw_02', ':runtimepermissions', ':mytime'
+include ':app', ':surfaceviewcamerarecording', ':camerasurfvw_02', ':runtimepermissions', ':mytime', ':aws', ':android-notes-app', ':hrm'

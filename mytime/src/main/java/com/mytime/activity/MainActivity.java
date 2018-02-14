@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mytime.R;
+import com.mytime.utils.Stopwatch;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button button_In_Time,button_Out_Time,button_punch;
     TextView txtVw_val_status;
     private boolean isChecked =false,isLogin=false;
-
+    Stopwatch mSw=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +31,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     }
 
     private void initThread() {
-
-
             Thread myThread = null;
             Runnable myRunnableThread = new CountDownRunner();
             myThread = new Thread(myRunnableThread);
             myThread.start();
-
     }
 
     private void intiViews() {
+        mSw= new Stopwatch();
         button_In_Time =(Button)findViewById(R.id.button_In_Time);
         button_Out_Time =(Button)findViewById(R.id.button_Out_Time);
         button_punch =(Button)findViewById(R.id.button_punch);
@@ -63,16 +62,22 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                     getCurrentTime("Check-OUT");
                     isChecked = true;
                     isLogin = true;
+                    mSw.start();
+                    //txtVw_val_status.setText(""+mSw.toString());
+
                 }
                 break;
             case R.id.button_punch:
                 if(isLogin) {
                     if (isChecked) {
+                        Thread.currentThread().interrupt();
                         getCurrentTime("Check-IN");
                         isChecked = false;
+                        mSw.pause();
                     } else {
                         getCurrentTime("Check-OUT");
                         isChecked = true;
+                        mSw.resume();
                     }
                 }else{
                     Toast.makeText(MainActivity.this,"Please Login",Toast.LENGTH_SHORT).show();
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                     getCurrentTime("Check-IN");
                     isChecked = false;
                     isLogin = false;
+                    mSw.stop();
                 }
                 break;
         }
@@ -110,14 +116,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         runOnUiThread(new Runnable() {
             public void run() {
                 try{
-
                     Date dt = new Date();
                     int hours = dt.getHours();
                     int minutes = dt.getMinutes();
                     int seconds = dt.getSeconds();
                     String curTime = hours + ":" + minutes + ":" + seconds;
-                    txtVw_val_status.setText(curTime);
-
+                    //txtVw_val_status.setText(curTime);
+                    txtVw_val_status.setText(""+mSw.toString());
                 }catch (Exception e) {e.printStackTrace();}
             }
         });
@@ -130,7 +135,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             while(!Thread.currentThread().isInterrupted()){
                 try {
                     doWork();
-                    Thread.sleep(1000); // Pause of 1 Second
+                    Thread.sleep(10); // Pause of 1 Second
+                    //Thread.sleep(1000); // Pause of 1 Second
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }catch(Exception e){
