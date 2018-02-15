@@ -34,6 +34,9 @@ dependencies {
     //compile 'com.amazonaws:aws-android-sdk-s3:2.6.+'
     //compile 'com.amazonaws:aws-android-sdk-ddb:2.6.+'
     //compile ('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true; }
+
+    //noinspection GradleDynamicVersion
+    compile 'com.amazonaws:aws-android-sdk-s3:2.6.+'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //Android Libraries
     testImplementation 'junit:junit:4.12'

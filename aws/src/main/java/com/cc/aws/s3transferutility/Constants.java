@@ -25,7 +25,7 @@ public class Constants {
     /*
      * Region of your Cognito identity pool ID.
      */
-    public static final String COGNITO_POOL_REGION = "Regions.AP_SOUTH_1";
+    public static final String COGNITO_POOL_REGION = "ap-south-1";
 
     /*
      * Note, you must first create a bucket using the S3 console before running
@@ -37,5 +37,5 @@ public class Constants {
     /*
      * Region of your bucket.
      */
-    public static final String BUCKET_REGION = "Regions.AP_SOUTH_1";
+    public static final String BUCKET_REGION = "ap-south-1";
 }

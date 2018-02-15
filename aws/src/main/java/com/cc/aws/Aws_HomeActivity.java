@@ -1,7 +1,15 @@
 package com.cc.aws;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.content.Intent;
+
+import com.aws.R;
 
 
  /*
@@ -20,8 +28,35 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 public class Aws_HomeActivity extends AppCompatActivity {
+    private Button btnDownload,btnUpload;
 
-    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.aws_homeactivity);
+        initUI();
+
+    }
+
+    private void initUI() {
+        btnDownload = (Button)findViewById(R.id.buttonDownloadMain);
+        btnUpload = (Button)findViewById(R.id.buttonUploadMain);
+        btnDownload.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(Aws_HomeActivity.this, DownloadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnUpload.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(Aws_HomeActivity.this, UploadActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }
 
 
