@@ -1,19 +1,17 @@
 package com.surfaceviewcamerarecording.activity;
 
-import android.hardware.Camera;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.pm.ActivityInfo;
+import android.hardware.Camera;
 import android.media.MediaRecorder;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.ToggleButton;
 
 import com.surfaceviewcamerarecording.R;
 
