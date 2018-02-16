@@ -96,7 +96,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 			return false;
 
 		int action = event.getAction();
-
+		System.out.println("event pointer " + event.getPointerCount());
 
 		if (event.getPointerCount() > 1) {
 			// handle multi-touch events
