@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="#b4a7a7">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/pauseCancelAllLayout"
@@ -84,41 +84,10 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/uploadDownloadLayout"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/operationLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/buttonUploadFile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/upload_file"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/buttonUploadImage"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_chainStyle="spread"/>
-
-        <Button
-            android:id="@+id/buttonUploadImage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/upload_image"
-            app:layout_constraintLeft_toRightOf="@+id/buttonUploadFile"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
         android:id="@+id/downloadLayout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/uploadDownloadLayout"
-
+        app:layout_constraintBottom_toTopOf="@+id/operationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -141,7 +110,7 @@
         <ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:cacheColorHint="#00000000"
             android:divider="#808080"
             android:dividerHeight="1dp"
