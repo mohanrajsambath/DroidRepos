@@ -1,8 +1,5 @@
 package com.camerasurfvw_02;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
@@ -10,13 +7,16 @@ import android.hardware.Camera.CameraInfo;
 import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import com.camerasurfvw_02.view.CameraPreview;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {

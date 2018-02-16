@@ -1,7 +1,7 @@
 package com.mytime.utils;
 
  /*
- * Copyright (c) 2018. Created by Mohanraj.S,Innobot Systems on 7/2/18 for DroidRepos
+ * Copyright (c) 2018. Created by Mohanraj.S,on 7/2/18 for DroidRepos
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
