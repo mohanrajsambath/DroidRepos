@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2c2c2"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+    <!-- This radio button is set to clickable:false so that the onclick listener of the entire row
+    will be called -->
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:clickable="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFileName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@id/radioButton1"
+        android:text="@string/app_name"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/radioButton1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/radioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/textFileName" />
+
+
+    <TextView
+        android:id="@+id/textBytes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toStartOf="@+id/textState"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/radioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toStartOf="@+id/textPercentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textBytes"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1" />
+
+    <TextView
+        android:id="@+id/textPercentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#b12900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textState"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1" />
+
+
+
+    <!-- <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/radioButton1"
+        app:layout_constraintLeft_toRightOf="@+id/radioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintRight_toRightOf="@+id/textState"
+             />
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/textBytes"
+            app:layout_constraintHorizontal_chainStyle="spread"/>
+
+        <TextView
+            android:id="@+id/textPercentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="#b12900"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/textState"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>-->
+
+
+</android.support.constraint.ConstraintLayout>
