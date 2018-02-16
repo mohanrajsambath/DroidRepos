@@ -42,7 +42,7 @@ import com.cc.aws.s3transferutility.Constants;
 
 
  /*
- * Copyright (c) 2018. Created by Mohanraj.S,Innobot Systems on 15/2/18 for DroidRepos
+ * Copyright (c) 2018. Created by Mohanraj.S,on 15/2/18 for DroidRepos
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at

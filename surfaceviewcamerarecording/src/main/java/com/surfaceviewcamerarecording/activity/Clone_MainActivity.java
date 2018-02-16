@@ -16,8 +16,6 @@ import android.widget.Toast;
 
 import com.surfaceviewcamerarecording.R;
 import com.surfaceviewcamerarecording.utils.CaptureUtils;
-import com.surfaceviewcamerarecording.view.CamPreview;
-import com.surfaceviewcamerarecording.view.CloneCamPreview;
 
 public class Clone_MainActivity extends AppCompatActivity {
 
