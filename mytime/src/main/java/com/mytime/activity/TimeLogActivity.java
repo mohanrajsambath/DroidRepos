@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+public class TimeLogActivity extends AppCompatActivity  implements View.OnClickListener{
     private Button button_In_Time,button_Out_Time,button_punch;
     TextView txtVw_val_status;
     private boolean isChecked =false,isLogin=false;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_timelog);
         intiViews();
         //initThread();
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                         mSw.resume();
                     }
                 }else{
-                    Toast.makeText(MainActivity.this,"Please Login",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TimeLogActivity.this,"Please Login",Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                     int seconds = dt.getSeconds();
                     String curTime = hours + ":" + minutes + ":" + seconds;
                     //txtVw_val_status.setText(curTime);
-                    txtVw_val_status.setText(""+mSw.toString());
+                    txtVw_val_status.setText(mSw.toString());
                 }catch (Exception e) {e.printStackTrace();}
             }
         });
@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }catch(Exception e){
+                    throw e;
                 }
             }
         }
