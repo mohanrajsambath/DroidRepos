@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/android-notes-app/android-notes-app.iml" filepath="$PROJECT_DIR$/android-notes-app/android-notes-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" filepath="$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autocam/autocam.iml" filepath="$PROJECT_DIR$/autocam/autocam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" filepath="$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" />
       <module fileurl="file://$PROJECT_DIR$/aws/aws.iml" filepath="$PROJECT_DIR$/aws/aws.iml" />
       <module fileurl="file://$PROJECT_DIR$/batterydata/batterydata.iml" filepath="$PROJECT_DIR$/batterydata/batterydata.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" filepath="$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" />
