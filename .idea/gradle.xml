@@ -8,14 +8,22 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/activitycustanimation" />
             <option value="$PROJECT_DIR$/android-notes-app" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/apsfacedetection" />
             <option value="$PROJECT_DIR$/aws" />
+            <option value="$PROJECT_DIR$/batterydata" />
             <option value="$PROJECT_DIR$/camerasurfvw_02" />
+            <option value="$PROJECT_DIR$/demofragswitch" />
+            <option value="$PROJECT_DIR$/facedetection_test1" />
             <option value="$PROJECT_DIR$/hrm" />
             <option value="$PROJECT_DIR$/mytime" />
+            <option value="$PROJECT_DIR$/readsqlite" />
+            <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/runtimepermissions" />
             <option value="$PROJECT_DIR$/surfaceviewcamerarecording" />
+            <option value="$PROJECT_DIR$/transitionactivity" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
