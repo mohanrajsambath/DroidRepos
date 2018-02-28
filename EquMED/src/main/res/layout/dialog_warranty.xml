@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_message"
+    android:layout_width="fill_parent"
+    android:minWidth="250dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/shapealert"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lLayoutDialog_wrnty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dip">
+
+        <TextView
+            android:id="@+id/txt_wrnty_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="f"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+        <View
+            android:id="@+id/divline_wrnty"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#000000"
+            android:padding="20dip"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_wrnty_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="13dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/txt_wrnty_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="5dip"
+            android:textColor="#000000"
+            android:textSize="13dp"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_message"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_no_wrnty"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/colorDashButton_600"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_yes_wrnty"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#1B5E20"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lLayoutMailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <include layout="@layout/mail_layout" />
+    </LinearLayout>
+</LinearLayout>

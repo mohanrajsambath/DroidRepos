@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lLayout_medEquipDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dip">
+
+        <LinearLayout
+            android:id="@+id/lLayout_hosptName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_medEquipDetails"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_hosptName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Hospital Name *"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/spn_View_hosptList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:ems="5"
+                android:hint="Hospital Name"
+                android:textSize="15dip">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_locationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_hosptName"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_locationCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Location Code"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_locationCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Location Code"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_serialNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_locationCode"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_serialNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Serial No"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt__View_serialNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Serial No"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_equip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_serialNo"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_equip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Equipment"
+                android:textColor="#000000" />
+
+
+            <Spinner
+                android:id="@+id/spn_View_equipList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:ems="5"
+                android:hint="Equipment List"
+                android:textSize="15dip">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_make"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_equip"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_make"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Make"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_make"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Make"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_make"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Model"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Model"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/lLayout_equipImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_equipId"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dip"
+                android:layout_weight="1.37"
+                android:text="Image"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/imgVw_View_equipImage"
+                android:layout_width="0dp"
+                android:layout_height="120dip"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:scaleType="fitXY"
+                android:src="@drawable/userimage" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lLayout_attDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_equipImage"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_attDoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Attach Documents"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_attDoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Attach Documents"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_insDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_attDoc"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_insDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Installation Date"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_insDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Installation Date"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_serTagNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_insDate"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_serTagNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Service Tag No"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_serTagNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Service Tag No"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_medEquipNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_serTagNo"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_medEquipNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.37"
+                    android:text="Notes"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37">
+
+                <EditText
+                    android:id="@+id/eTxt_View_medEquipNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_itemEquip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_medEquipNotes"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_itemEquip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Provided with the Equipment"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lLayout_ups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_itemEquip"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_ups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UPS"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.37">
+
+                <RadioGroup
+                    android:id="@+id/rBtn_View_upsGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_upsYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_upsNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lLayout_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_ups"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_manual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manual"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.37">
+
+                <RadioGroup
+                    android:id="@+id/rBtn_View_manualGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_manualYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_manualNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_stabilizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_manual"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_stabilizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stabilizer"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.37">
+
+                <RadioGroup
+                    android:id="@+id/rBtn_View_stabGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_stabYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/rBtn_View_stabNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_accList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_stabilizer"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_accList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Accessories List"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/eTxt_View_accList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:background="@drawable/rect_edittext"
+                android:ems="5"
+                android:hint="Accessories List"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="15dip">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_insCond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_accList"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_insCond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Installation Condition"
+                android:textColor="#000000" />
+
+
+            <Spinner
+                android:id="@+id/spn_View_insCond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:ems="5"
+                android:hint="Installation Condition"
+                android:textSize="15dip">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_insNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_insCond"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_insNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.37"
+                    android:text="Installation Notes"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37">
+
+                <EditText
+                    android:id="@+id/eTxt_View_insNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLayout_worCond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_insNotes"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtVw_worCond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="Working Condition"
+                android:textColor="#000000" />
+
+
+            <Spinner
+                android:id="@+id/spn_View_worCond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.63"
+                android:ems="5"
+                android:hint="Working Condition"
+                android:textSize="15dip">
+
+            </Spinner>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lLayout_condNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lLayout_worCond"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1.63">
+
+                <TextView
+                    android:id="@+id/txtVw_worCondNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.37"
+                    android:text="Condition Notes"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37">
+
+                <EditText
+                    android:id="@+id/eTxt_View_condNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Condition Notes"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

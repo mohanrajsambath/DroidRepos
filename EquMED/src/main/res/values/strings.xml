@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EquMED</string>
+    <string name="action_settings">Settings</string>
+    <string name="emailPattern">
+        ^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$
+    </string>
+    <string name="link_text_auto">http://greentelemed.com.pg/</string>
+    <string name="sync">Sync To Java </string>
+    <string name="sync2odoo">Send Data to Server</string>
+    <string name="phoneNo">+91-422-2971111</string>
+
+
+    <string name="about_Us">About Us</string>
+    <string name="contact_Us">Contact Us</string>
+    <string name="log_out">Log Out</string>
+</resources>

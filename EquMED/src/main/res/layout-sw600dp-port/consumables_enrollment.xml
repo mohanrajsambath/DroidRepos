@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_dummy"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/consumables_add_edit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/lLayout_hosp_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/txtVw_hosp_name1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.37"
+                                android:text="Hospital / Location "
+                                android:textColor="#000000" />
+
+                            <EditText
+                                android:id="@+id/txtVw_hosp_name_val1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.63"
+                                android:background="@drawable/rect_edittext"
+                                android:ems="5"
+                                android:imeOptions="actionDone"
+                                android:inputType="text|textNoSuggestions"
+                                android:focusableInTouchMode="false"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textSize="15dip"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lLayout_Equip_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/txtVw_Equip_name1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.37"
+                                android:text="Equipment Name "
+                                android:textColor="#000000" />
+
+                            <EditText
+                                android:id="@+id/txtVw_Equip_name_val1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.63"
+                                android:background="@drawable/rect_edittext"
+                                android:ems="5"
+                                android:imeOptions="actionDone"
+                                android:inputType="text|textNoSuggestions"
+                                android:focusableInTouchMode="false"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textSize="15dip"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Name *"
+                            android:textColor="#000000" />
+
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:hint="Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|textNoSuggestions"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Description "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:hint="Description"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|textNoSuggestions"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_type_of_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_type_of_usage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Type of Usage "
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1.7">
+
+                            <RadioGroup
+                                android:id="@+id/rBtn_consumables_type_of_usage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/rBtn_time_based"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Time Based"
+                                    android:checked="true"/>
+
+                                <RadioButton
+                                    android:id="@+id/rBtn_usage_based"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Usage Based" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_usage_parameter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_usage_parameter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Usage Parameter *"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1.7">
+
+                            <Spinner
+                                android:id="@+id/spn_consumables_usage_parameter"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.63"
+                                android:ems="5"
+                                android:hint="Usage Parameter"
+                                android:textSize="15dip">
+                            </Spinner>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Quantity "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:hint="Quantity"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_uom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_uom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="UOM"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1.7">
+
+                            <Spinner
+                                android:id="@+id/spn_consumables_uom"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.63"
+                                android:ems="5"
+                                android:hint="UOM"
+                                android:textSize="15dip">
+                            </Spinner>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_current_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_current_stock"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Current Stock "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_current_stock"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:hint="Current Stock"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_notes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Notes "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_notes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:hint="Notes"
+                            android:imeOptions="actionDone"
+                            android:inputType="text|textNoSuggestions"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_createdBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_createdBy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Created By "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_createdBy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:editable="false"
+                            android:focusableInTouchMode="false"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLayout_consumables_createdOn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtVw_consumables_createdOn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="Created Date "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/eTxt_consumables_createdOn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.63"
+                            android:editable="false"
+                            android:focusableInTouchMode="false"
+                            android:background="@drawable/rect_edittext"
+                            android:ems="5"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textSize="15dip"></EditText>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/consumables_eq_hos_name"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/lLayout_hosp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txtVw_hosp_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.37"
+                        android:text="Hospital Name / Location "
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtVw_conDetails_label_colon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtVw_hosp_name_val"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.37"
+                        android:text="KMCH / CBE"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lLayout_Equip_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txtVw_Equip_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.37"
+                        android:text="Equipment Name "
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtVw_trngDetails_label_colon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtVw_Equip_name_val"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.37"
+                        android:text="Scanner"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_listDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#505050"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c8c8c8"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtVw_consumables_serialNo1"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="S.No"
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c8c8c8"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtVw_Consumables_name"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c8c8c8"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtVw_consumables_typeOfUsage"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:paddingLeft="4dip"
+                        android:text="Type of Usage"
+
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c8c8c8"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/update_consumable"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:paddingLeft="4dip"
+                        android:text="Update"
+
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c8c8c8"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/list_consumables"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dummy"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00ffffff"
+            android:orientation="vertical"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtVw_noconsumablesFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="No consumable details found"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_consumableMstSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/save"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_ConsumDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/delete"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_consumableMstAddNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/plus79" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_ConsumablesClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/clear"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

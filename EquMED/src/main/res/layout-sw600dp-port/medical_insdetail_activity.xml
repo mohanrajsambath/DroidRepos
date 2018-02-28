@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_fab_insDetailSave"
+        android:layout_marginBottom="60dip">
+
+        <LinearLayout
+            android:id="@+id/lLayout_insDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lLayout_insDetails_eqpmnt_enroll_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insDetails"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.37"
+                    android:text="Medical Equipment Id"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/txtVw_insDetails_eqpmnt_enroll_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.63"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_hosp_loc_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout__insDetails_eqpmnt_enroll_id"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtVw_hosp_loc_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Hospital / Location"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_hosp_loc_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Hospital / Location"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    android:textSize="15dip">
+
+                </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_eqName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout__insDetails_eqpmnt_enroll_id"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtVw_eqName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Equipment Name"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_eqName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Equipment Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:focusableInTouchMode="false"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_compName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout__insDetails_eqpmnt_enroll_id"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_compInsName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Company installed by"
+                    android:textColor="#000000" />
+
+
+                <EditText
+                    android:id="@+id/eTxt_compInsName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Company installed by"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_engName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_compName"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_engName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Engineer Name"
+                    android:textColor="#000000" />
+
+
+                <EditText
+                    android:id="@+id/eTxt_engName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Engineer Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_insDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_engName"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_insDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Date"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_insDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:focusableInTouchMode="false"
+                    android:hint="Date"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusRight="@+id/eTxt_engName"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_gpsLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insDate"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_gpsLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Location Code"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_gpsLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="GPS Location"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textNoSuggestions"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_nrbPhnNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_gpsLoc"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_nrbPhoNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Nearby Phone No"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_nrbPhnNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:digits="0123456789+"
+                    android:ems="5"
+                    android:hint="Nearby Phone No"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_insNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_nrbPhnNo"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40">
+
+                    <TextView
+                        android:id="@+id/txtVw_insNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.37"
+                        android:text="Notes"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60">
+
+                    <EditText
+                        android:id="@+id/eTxt_insNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_edittext"
+                        android:ems="5"
+                        android:hint="Notes"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15dip">
+
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_insImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insNotes"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_insImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Installer Image"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imgVw_insImg"
+                    android:layout_width="0dp"
+                    android:layout_height="120dip"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:imeOptions="actionNext"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/userimage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_insAttDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insImage"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_insAttDoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Attach Documents"
+                    android:textColor="#000000" />
+                <Button
+                    android:id="@+id/btn_attach_document_installer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:text="Attach Document" />
+                <EditText
+                    android:id="@+id/eTxt_insAttDoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:visibility="gone"
+                    android:focusableInTouchMode="false"
+                    android:hint="Attach Documents"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_instlDtls_attDocList_installer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ListView
+                    android:id="@+id/lv_installerDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_insArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insAttDoc"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_insArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Area"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_insArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Area"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_supName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insArea"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_supName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Equipment Incharge Name"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_supName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:hint="Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_supPhnNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_insArea"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_supPhnNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Equipment Incharge Phone No"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_supPhnNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:digits="0123456789+"
+                    android:ems="5"
+                    android:hint="Phone No"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_areaSupImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_supPhnNo"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_areaSupImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dip"
+                    android:layout_weight="1.60"
+                    android:text="Equipment Incharge Image"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imgVw_areaSupImg"
+                    android:layout_width="0dp"
+                    android:layout_height="120dip"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:imeOptions="actionNext"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/userimage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_supAttDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_areaSupImg"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txtVw_supAttDoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Attach Documents"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btn_attach_document_owner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:text="Attach Document" />
+
+                <EditText
+                    android:id="@+id/eTxt_supAttDoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:ems="5"
+                    android:visibility="gone"
+                    android:focusableInTouchMode="false"
+                    android:hint="Attach Documents"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_instlDtls_attDocList_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ListView
+                    android:id="@+id/lv_ownerDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLayout_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_supAttDoc"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtVw_active"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.37"
+                    android:text="Active"
+                    android:textColor="#000000" />
+
+
+                <Switch
+                    android:id="@+id/switch_active"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.815"
+                    android:checked="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
+
+                <TextView
+                    android:id="@+id/txtVw_activeYesNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.815"
+                    android:text="Yes"
+                    android:textColor="#000000"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lLayout_id_createdBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_active"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_id_createdBy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Created By"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_id_createdBy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Created By "
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lLayout_id_createdOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLayout_id_createdBy"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/txtVw_id_createdOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.60"
+                    android:text="Created Date"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/eTxt_id_createdOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.40"
+                    android:background="@drawable/rect_edittext"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Created By "
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dip">
+
+                </EditText>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<RelativeLayout
+        android:id="@+id/rLayout_bottomButton_insDetails"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_insDetailCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_insDetailSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/save"/>
+
+
+    </RelativeLayout>-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_insDetailDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/delete" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_insDetailSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/save" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab_MedInstClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/clear"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

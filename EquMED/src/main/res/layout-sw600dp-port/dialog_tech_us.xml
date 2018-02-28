@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/technicalLayout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtVw_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#66bb6a"
+        android:padding="10dip"
+        android:text="Technical Support"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT Inc."
+            android:textColor="#FF276CF9"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lLayoutNextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/txtVw_nxtAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Address"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=":"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:id="@+id/txtVw_addDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:padding="5dp"
+            android:text="308/1,Third Floor ELCOT IT/ITES-SEZ, TIDEL PARK,Coimbatore."
+            android:textColor="#000"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Phone"
+            android:id="@+id/tech_phone"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=":"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:id="@+id/txtVw_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:autoLink="all"
+            android:padding="5dp"
+            android:text="+91-422-2971111"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/imgVw_technicalcall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/call"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:text="Email"
+            android:id="@+id/tech_email"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=":"
+            android:textColor="#000"></TextView>
+
+        <TextView
+            android:id="@+id/txtVw_nextEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:padding="5dp"
+            android:text="info@nexttechnosolutions.com"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/imgVw_Email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/mail"/>
+    </LinearLayout>
+
+
+    <!--<LinearLayout
+        android:id="@+id/mailLayout"
+        android:layout_below="@+id/technicalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textViewTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="To : "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <EditText
+                android:id="@+id/eTxtVwEmailTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:text="nexttechnosolutions@gmail.com"
+                android:textColor="#000" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/eTxtVwEmailSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/eTxtVwEmailTo"
+            android:layout_marginTop="20dp"
+            android:text="Subject : "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <EditText
+                android:id="@+id/editTextEmailSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:textColor="#000">
+
+                <requestFocus />
+
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtVwEmailContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:text="Message : "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <EditText
+                android:id="@+id/eTxtVwEmailContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textColor="#000" />
+        </android.support.design.widget.TextInputLayout>
+
+        &lt;!&ndash;<Button
+            android:id="@+id/btnSendMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"/>&ndash;&gt;
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSendMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textColor="#000" />
+
+    </LinearLayout>-->
+</LinearLayout>
+
+
