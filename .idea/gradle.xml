@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/EquMED" />
             <option value="$PROJECT_DIR$/activitycustanimation" />
             <option value="$PROJECT_DIR$/android-notes-app" />
             <option value="$PROJECT_DIR$/apple" />
@@ -27,8 +28,10 @@
             <option value="$PROJECT_DIR$/readsqlite" />
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/runtimepermissions" />
+            <option value="$PROJECT_DIR$/signalstatus" />
             <option value="$PROJECT_DIR$/surfaceviewcamerarecording" />
             <option value="$PROJECT_DIR$/transitionactivity" />
+            <option value="$PROJECT_DIR$/zBarScannerLibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

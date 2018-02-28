@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidRepos.iml" filepath="$PROJECT_DIR$/DroidRepos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EquMED/EquMED.iml" filepath="$PROJECT_DIR$/EquMED/EquMED.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" filepath="$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-notes-app/android-notes-app.iml" filepath="$PROJECT_DIR$/android-notes-app/android-notes-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/apple/app.iml" filepath="$PROJECT_DIR$/apple/app.iml" />
@@ -22,8 +23,10 @@
       <module fileurl="file://$PROJECT_DIR$/readsqlite/readsqlite.iml" filepath="$PROJECT_DIR$/readsqlite/readsqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" filepath="$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signalstatus/signalstatus.iml" filepath="$PROJECT_DIR$/signalstatus/signalstatus.iml" />
       <module fileurl="file://$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" filepath="$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" />
       <module fileurl="file://$PROJECT_DIR$/transitionactivity/transitionactivity.iml" filepath="$PROJECT_DIR$/transitionactivity/transitionactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zBarScannerLibrary/zBarScannerLibrary.iml" filepath="$PROJECT_DIR$/zBarScannerLibrary/zBarScannerLibrary.iml" />
     </modules>
   </component>
 </project>
