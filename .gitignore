@@ -77,3 +77,5 @@ instapk.properties
 proguard-rules.pro
 src/
 
+
+.idea/instapk.xml
