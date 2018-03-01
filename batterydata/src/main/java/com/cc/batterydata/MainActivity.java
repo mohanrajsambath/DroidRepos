@@ -1,36 +1,18 @@
 package com.cc.batterydata;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.os.BatteryManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.BatteryManager;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textBatteryLevel = null;
     String batteryLevelInfo = "Battery Level";
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        textBatteryLevel = (TextView) findViewById(R.id.txtBatteryInfo);
-
-        registerBatteryLevelReceiver();
-    }
-
-    @Override
-    protected void onDestroy() {
-        unregisterReceiver(battery_receiver);
-
-        super.onDestroy();
-    }
-
     private BroadcastReceiver battery_receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -68,6 +50,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textBatteryLevel = findViewById(R.id.txtBatteryInfo);
+
+        registerBatteryLevelReceiver();
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(battery_receiver);
+
+        super.onDestroy();
+    }
 
     private String getPlugTypeString(int plugged) {
         String plugType = "Unknown";

@@ -8,7 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/EquMED" />
             <option value="$PROJECT_DIR$/activitycustanimation" />
             <option value="$PROJECT_DIR$/android-notes-app" />
             <option value="$PROJECT_DIR$/apple" />
@@ -21,10 +20,12 @@
             <option value="$PROJECT_DIR$/batterymonitoring" />
             <option value="$PROJECT_DIR$/camerasurfvw_02" />
             <option value="$PROJECT_DIR$/demofragswitch" />
+            <option value="$PROJECT_DIR$/edittextdyanmic" />
             <option value="$PROJECT_DIR$/emailautocomplete" />
             <option value="$PROJECT_DIR$/facedetection_test1" />
             <option value="$PROJECT_DIR$/hrm" />
             <option value="$PROJECT_DIR$/mytime" />
+            <option value="$PROJECT_DIR$/passwordtoggle" />
             <option value="$PROJECT_DIR$/readsqlite" />
             <option value="$PROJECT_DIR$/recyclerview" />
             <option value="$PROJECT_DIR$/runtimepermissions" />

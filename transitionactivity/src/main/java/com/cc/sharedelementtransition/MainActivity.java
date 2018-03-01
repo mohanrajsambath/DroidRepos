@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
-        RecyclerView rv = (RecyclerView) findViewById(R.id.rv); // layout reference
+        RecyclerView rv = findViewById(R.id.rv); // layout reference
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);

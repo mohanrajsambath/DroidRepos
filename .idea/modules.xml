@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidRepos.iml" filepath="$PROJECT_DIR$/DroidRepos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EquMED/EquMED.iml" filepath="$PROJECT_DIR$/EquMED/EquMED.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" filepath="$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-notes-app/android-notes-app.iml" filepath="$PROJECT_DIR$/android-notes-app/android-notes-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/apple/app.iml" filepath="$PROJECT_DIR$/apple/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apple/apple.iml" filepath="$PROJECT_DIR$/apple/apple.iml" />
       <module fileurl="file://$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" filepath="$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" />
       <module fileurl="file://$PROJECT_DIR$/autocam/autocam.iml" filepath="$PROJECT_DIR$/autocam/autocam.iml" />
       <module fileurl="file://$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" filepath="$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" />
@@ -16,10 +16,12 @@
       <module fileurl="file://$PROJECT_DIR$/batterymonitoring/batterymonitoring.iml" filepath="$PROJECT_DIR$/batterymonitoring/batterymonitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" filepath="$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" />
       <module fileurl="file://$PROJECT_DIR$/demofragswitch/demofragswitch.iml" filepath="$PROJECT_DIR$/demofragswitch/demofragswitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edittextdyanmic/edittextdyanmic.iml" filepath="$PROJECT_DIR$/edittextdyanmic/edittextdyanmic.iml" />
       <module fileurl="file://$PROJECT_DIR$/emailautocomplete/emailautocomplete.iml" filepath="$PROJECT_DIR$/emailautocomplete/emailautocomplete.iml" />
       <module fileurl="file://$PROJECT_DIR$/facedetection_test1/facedetection_test1.iml" filepath="$PROJECT_DIR$/facedetection_test1/facedetection_test1.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm/hrm.iml" filepath="$PROJECT_DIR$/hrm/hrm.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytime/mytime.iml" filepath="$PROJECT_DIR$/mytime/mytime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/passwordtoggle/app.iml" filepath="$PROJECT_DIR$/passwordtoggle/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/readsqlite/readsqlite.iml" filepath="$PROJECT_DIR$/readsqlite/readsqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" filepath="$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" />

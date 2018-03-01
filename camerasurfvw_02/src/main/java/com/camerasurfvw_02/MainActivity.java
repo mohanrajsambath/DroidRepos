@@ -20,13 +20,67 @@ import com.camerasurfvw_02.view.CameraPreview;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
+    boolean recording = false;
     private Camera mCamera;
     private CameraPreview mPreview;
     private MediaRecorder mediaRecorder;
     private Button capture, switchCamera;
+    OnClickListener captrureListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (recording) {
+                // stop recording and release camera
+                mediaRecorder.stop(); // stop the recording
+                releaseMediaRecorder(); // release the MediaRecorder object
+                Toast.makeText(MainActivity.this, "Video captured!", Toast.LENGTH_LONG).show();
+                //capture.setBackgroundResource(R.drawable.ic_stop_black_24dp);
+                capture.setBackgroundResource(R.drawable.ic_adjust_black_24dp);
+                recording = false;
+            } else {
+                capture.setBackgroundResource(R.drawable.ic_stop_black_24dp);
+               // capture.setBackgroundResource(R.drawable.ic_adjust_black_24dp);
+                if (!prepareMediaRecorder()) {
+                    Toast.makeText(MainActivity.this, "Fail in prepareMediaRecorder()!\n - Ended -", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+                // work on UiThread for better performance
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        // If there are stories, add them to the table
+
+                        try {
+                            mediaRecorder.start();
+                        } catch (final Exception ex) {
+                            // Log.i("---","Exception in thread");
+                        }
+                    }
+                });
+
+                recording = true;
+            }
+        }
+    };
     private Context myContext;
     private LinearLayout cameraPreview;
     private boolean cameraFront = false;
+    OnClickListener switchCameraListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // get the number of cameras
+            if (!recording) {
+                int camerasNumber = Camera.getNumberOfCameras();
+                if (camerasNumber > 1) {
+                    // release the old camera instance
+                    // switch camera, from the front and the back and vice versa
+                    releaseCamera();
+                    chooseCamera();
+                } else {
+                    Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initialize() {
-        cameraPreview = (LinearLayout) findViewById(R.id.camera_preview);
+        cameraPreview = findViewById(R.id.camera_preview);
 
         mPreview = new CameraPreview(myContext, mCamera);
         cameraPreview.addView(mPreview);
@@ -102,34 +156,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        capture = (Button) findViewById(R.id.button_capture);
+        capture = findViewById(R.id.button_capture);
         capture.setOnClickListener(captrureListener);
 
-        switchCamera = (Button) findViewById(R.id.button_ChangeCamera);
+        switchCamera = findViewById(R.id.button_ChangeCamera);
         switchCamera.setOnClickListener(switchCameraListener);
 
 
 
     }
-
-    OnClickListener switchCameraListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            // get the number of cameras
-            if (!recording) {
-                int camerasNumber = Camera.getNumberOfCameras();
-                if (camerasNumber > 1) {
-                    // release the old camera instance
-                    // switch camera, from the front and the back and vice versa
-                    releaseCamera();
-                    chooseCamera();
-                } else {
-                    Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
-                    toast.show();
-                }
-            }
-        }
-    };
 
     public void chooseCamera() {
         // if the camera preview is the front
@@ -168,49 +203,8 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean hasCamera(Context context) {
         // check if the device has camera
-        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
-            return true;
-        } else {
-            return false;
-        }
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
     }
-
-    boolean recording = false;
-    OnClickListener captrureListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (recording) {
-                // stop recording and release camera
-                mediaRecorder.stop(); // stop the recording
-                releaseMediaRecorder(); // release the MediaRecorder object
-                Toast.makeText(MainActivity.this, "Video captured!", Toast.LENGTH_LONG).show();
-                //capture.setBackgroundResource(R.drawable.ic_stop_black_24dp);
-                capture.setBackgroundResource(R.drawable.ic_adjust_black_24dp);
-                recording = false;
-            } else {
-                capture.setBackgroundResource(R.drawable.ic_stop_black_24dp);
-               // capture.setBackgroundResource(R.drawable.ic_adjust_black_24dp);
-                if (!prepareMediaRecorder()) {
-                    Toast.makeText(MainActivity.this, "Fail in prepareMediaRecorder()!\n - Ended -", Toast.LENGTH_LONG).show();
-                    finish();
-                }
-                // work on UiThread for better performance
-                runOnUiThread(new Runnable() {
-                    public void run() {
-                        // If there are stories, add them to the table
-
-                        try {
-                            mediaRecorder.start();
-                        } catch (final Exception ex) {
-                            // Log.i("---","Exception in thread");
-                        }
-                    }
-                });
-
-                recording = true;
-            }
-        }
-    };
 
     private void releaseMediaRecorder() {
         if (mediaRecorder != null) {

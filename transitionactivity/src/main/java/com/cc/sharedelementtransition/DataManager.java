@@ -1,7 +1,5 @@
 package com.cc.sharedelementtransition;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
@@ -11,19 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class DataManager extends RecyclerView.Adapter<DataManager.RecyclerViewHolder> {
-
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
-
-        TextView mName, mPhone;
-        View mCircle;
-
-        RecyclerViewHolder(View itemView) {
-            super(itemView);
-            mName = (TextView) itemView.findViewById(R.id.CONTACT_name);
-            mPhone = (TextView) itemView.findViewById(R.id.CONTACT_phone);
-            mCircle = itemView.findViewById(R.id.CONTACT_circle);
-        }
-    }
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
@@ -46,5 +31,18 @@ public class DataManager extends RecyclerView.Adapter<DataManager.RecyclerViewHo
     @Override
     public int getItemCount() {
         return Contact.CONTACTS.length;
+    }
+
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
+
+        TextView mName, mPhone;
+        View mCircle;
+
+        RecyclerViewHolder(View itemView) {
+            super(itemView);
+            mName = itemView.findViewById(R.id.CONTACT_name);
+            mPhone = itemView.findViewById(R.id.CONTACT_phone);
+            mCircle = itemView.findViewById(R.id.CONTACT_circle);
+        }
     }
 }

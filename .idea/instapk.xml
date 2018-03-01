@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectStorageHelper">
     <option name="apkLocation" value="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-    <option name="packageName" value="com.surfacevwcamrecording" />
+    <option name="packageName" value="com.cc.sharedelementtransition" />
     <option name="projectName" value="DroidRepos" />
   </component>
 </project>

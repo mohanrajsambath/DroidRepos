@@ -91,12 +91,12 @@ public class NoteListActivity
         mTwoPane = (findViewById(R.id.note_detail_container) != null);
 
         // Initialize the Toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
         // Initialize the floating action button
-        addNoteButton = (FloatingActionButton) findViewById(R.id.addNoteButton);
+        addNoteButton = findViewById(R.id.addNoteButton);
         addNoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +115,7 @@ public class NoteListActivity
         });
 
         // Update the ListView with the CursorAdapter
-        notesList = (RecyclerView) findViewById(R.id.note_list);
+        notesList = findViewById(R.id.note_list);
         NotesAdapter adapter = new NotesAdapter(this, null);
         notesList.setAdapter(adapter);
 

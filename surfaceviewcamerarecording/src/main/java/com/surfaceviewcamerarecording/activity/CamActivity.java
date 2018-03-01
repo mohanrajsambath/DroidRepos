@@ -44,8 +44,8 @@ import java.io.IOException;
 
 public class CamActivity extends Activity {
 
+    public static boolean isClicked = false;
     private final int RC_GET_PICTURE = 301;
-
     private CamPreview mPreview;
     private CaptureUtils captureUtils;
     private RelativeLayout previewParent;
@@ -56,20 +56,96 @@ public class CamActivity extends Activity {
     private ImageView ivGridLines;
     private LinearLayout llGallery;
     private TextView textCamera;
-
-
     private SeekBar sbZoom;
-
     private boolean flashEnabled = false;
-
     private int activeCamera = 0;
-
     private OrientationEventListener orientationListener;
     private int screenOrientation = 90;
+    PictureCallback jpegCallback = new PictureCallback() {
+        public void onPictureTaken(byte[] data, Camera camera) {
+            FileOutputStream outStream = null;
+            try {
+                System.gc();
+                Bitmap bmp = BmpUtils.getResampledBitmap(data, 800);
+                bmp = BmpUtils.cropBitmapToSquare(bmp);
+
+                // Write to file
+//                File file = File.createTempFile("cam", "tmp", getFilesDir());
+                // File file = new
+                // File(Environment.getExternalStorageDirectory(), "cam.jpg");
+//                outStream = new FileOutputStream(file);
+
+                String FILENAME = "tmp" + System.currentTimeMillis() + ".jpg";
+
+                outStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+
+                bmp.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
+                // outStream.write(data);
+                outStream.close();
+                resetCam();
+
+                String path = getFilesDir() + "/" + FILENAME;
+                int orientation = 0;
+                int fix = 1;
+
+                if (activeCamera == 0) {
+                    ExifInterface ei = new ExifInterface(path);
+                    orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+                    ei.setAttribute(ExifInterface.TAG_ORIENTATION, "90");
+                    ei.saveAttributes();
+                } else {
+                    ExifInterface ei = new ExifInterface(path);
+                    orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+                    ei.setAttribute(ExifInterface.TAG_ORIENTATION, "0");
+                    ei.saveAttributes();
+                    orientation = ExifInterface.ORIENTATION_ROTATE_270;
+                    fix = -1;
+                }
+
+                switch (orientation) {
+                    case ExifInterface.ORIENTATION_UNDEFINED:
+                        BmpUtils.rotateBitmap(path, normalizeRot(90 + screenOrientation));
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_90:
+                        BmpUtils.rotateBitmap(path, normalizeRot(90 + screenOrientation));
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_180:
+                        BmpUtils.rotateBitmap(path, normalizeRot(180 + screenOrientation));
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_270:
+                        BmpUtils.rotateBitmap(path, normalizeRot(270 + fix * screenOrientation));
+                        break;
+                    case ExifInterface.ORIENTATION_NORMAL:
+                        BmpUtils.rotateBitmap(path, normalizeRot(screenOrientation));
+                        break;
+                }
+
+                //selectCategory(path);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+            }
+        }
+    };
     private int THRESHOLD = 30;
-    public static boolean isClicked = false;
     private ImageButton ibFlipCamera;
 
+    /**
+     * Get rotation in degrees
+     */
+    private static int exifOrientationToDegrees(int exifOrientation) {
+        if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
+            return 90;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180) {
+            return 180;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270) {
+            return 270;
+        }
+        return 0;
+    }
 
     @SuppressLint("NewApi")
     @Override
@@ -88,16 +164,16 @@ public class CamActivity extends Activity {
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     void InitControls() {
 
-        previewParent = (RelativeLayout) findViewById(R.id.rlPreview);
-        blackTop = (LinearLayout) findViewById(R.id.llBlackTop);
-        blackBottom = (LinearLayout) findViewById(R.id.llBlackBottom);
-        llGallery = (LinearLayout) findViewById(R.id.llGallery);
+        previewParent = findViewById(R.id.rlPreview);
+        blackTop = findViewById(R.id.llBlackTop);
+        blackBottom = findViewById(R.id.llBlackBottom);
+        llGallery = findViewById(R.id.llGallery);
 
-        ibFlash = (ImageButton) findViewById(R.id.ibFlash);
-        ibGrid = (ImageButton) findViewById(R.id.ibGrid);
-        ivGridLines = (ImageView) findViewById(R.id.ivGridLines);
-        ibFlipCamera = (ImageButton) findViewById(R.id.ibFlipCamera);
-        sbZoom = (SeekBar) findViewById(R.id.sbZoom);
+        ibFlash = findViewById(R.id.ibFlash);
+        ibGrid = findViewById(R.id.ibGrid);
+        ivGridLines = findViewById(R.id.ivGridLines);
+        ibFlipCamera = findViewById(R.id.ibFlipCamera);
+        sbZoom = findViewById(R.id.sbZoom);
 
 
         if (Camera.getNumberOfCameras() > 1) {
@@ -120,7 +196,6 @@ public class CamActivity extends Activity {
             }
         };
     }
-
 
     protected boolean isOrientation(int orientation, int degree) {
         return (degree - THRESHOLD <= orientation && orientation <= degree + THRESHOLD);
@@ -151,7 +226,6 @@ public class CamActivity extends Activity {
         releaseCamera();
         orientationListener.disable();
     }
-
 
     private void setupCamera(final int camera) {
         // Set the second argument by your choice.
@@ -268,7 +342,6 @@ public class CamActivity extends Activity {
         ibFlash.setImageResource(flashEnabled ? R.drawable.flash : R.drawable.flash_off);
     }
 
-
     public void captureClick(View view) {
         try {
             if (!isClicked) {
@@ -287,79 +360,6 @@ public class CamActivity extends Activity {
         startActivityForResult(iGetAvatar, RC_GET_PICTURE);
     }
 
-
-    PictureCallback jpegCallback = new PictureCallback() {
-        public void onPictureTaken(byte[] data, Camera camera) {
-            FileOutputStream outStream = null;
-            try {
-                System.gc();
-                Bitmap bmp = BmpUtils.getResampledBitmap(data, 800);
-                bmp = BmpUtils.cropBitmapToSquare(bmp);
-
-                // Write to file
-//                File file = File.createTempFile("cam", "tmp", getFilesDir());
-                // File file = new
-                // File(Environment.getExternalStorageDirectory(), "cam.jpg");
-//                outStream = new FileOutputStream(file);
-
-                String FILENAME = "tmp" + System.currentTimeMillis() + ".jpg";
-
-                outStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-
-                bmp.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
-                // outStream.write(data);
-                outStream.close();
-                resetCam();
-
-                String path = getFilesDir() + "/" + FILENAME;
-                int orientation = 0;
-                int fix = 1;
-
-                if (activeCamera == 0) {
-                    ExifInterface ei = new ExifInterface(path);
-                    orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-                    ei.setAttribute(ExifInterface.TAG_ORIENTATION, "90");
-                    ei.saveAttributes();
-                } else {
-                    ExifInterface ei = new ExifInterface(path);
-                    orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-                    ei.setAttribute(ExifInterface.TAG_ORIENTATION, "0");
-                    ei.saveAttributes();
-                    orientation = ExifInterface.ORIENTATION_ROTATE_270;
-                    fix = -1;
-                }
-
-                switch (orientation) {
-                    case ExifInterface.ORIENTATION_UNDEFINED:
-                        BmpUtils.rotateBitmap(path, normalizeRot(90 + screenOrientation));
-                        break;
-                    case ExifInterface.ORIENTATION_ROTATE_90:
-                        BmpUtils.rotateBitmap(path, normalizeRot(90 + screenOrientation));
-                        break;
-                    case ExifInterface.ORIENTATION_ROTATE_180:
-                        BmpUtils.rotateBitmap(path, normalizeRot(180 + screenOrientation));
-                        break;
-                    case ExifInterface.ORIENTATION_ROTATE_270:
-                        BmpUtils.rotateBitmap(path, normalizeRot(270 + fix * screenOrientation));
-                        break;
-                    case ExifInterface.ORIENTATION_NORMAL:
-                        BmpUtils.rotateBitmap(path, normalizeRot(screenOrientation));
-                        break;
-                }
-
-                //selectCategory(path);
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-            }
-        }
-    };
-
-
-
     protected void resetCam() {
         Camera camera = mPreview.getCamera();
         camera.startPreview();
@@ -373,7 +373,6 @@ public class CamActivity extends Activity {
             rot -= 360;
         return rot;
     }
-
 
     /**
      * Returns how much we have to rotate
@@ -390,7 +389,7 @@ public class CamActivity extends Activity {
             } else if (uri.getScheme().equals("file")) {
                 // From a file saved by the camera
                 ExifInterface exif = new ExifInterface(uri.getPath());
-                int rotation = (int) exifOrientationToDegrees(exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL));
+                int rotation = exifOrientationToDegrees(exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL));
                 return rotation;
             }
             return 0;
@@ -399,20 +398,6 @@ public class CamActivity extends Activity {
             e.printStackTrace();
             return 0;
         }
-    }
-
-    /**
-     * Get rotation in degrees
-     */
-    private static int exifOrientationToDegrees(int exifOrientation) {
-        if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
-            return 90;
-        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180) {
-            return 180;
-        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270) {
-            return 270;
-        }
-        return 0;
     }
 
     private void showLatestPhoto() {
@@ -443,7 +428,7 @@ public class CamActivity extends Activity {
         if (imageLocation == null)
             return;
 
-        final ImageView imageView = (ImageView) findViewById(R.id.ivGallery);
+        final ImageView imageView = findViewById(R.id.ivGallery);
         int rot = rotationForImage(Uri.parse("file://" + imageLocation));
         File imageFile = new File(imageLocation);
         if (imageFile.exists()) {

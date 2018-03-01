@@ -39,6 +39,7 @@ captures/
 .idea/gradle.xml
 .idea/dictionaries
 .idea/libraries
+.idea/modules.xml
 
 # Keystore files
 # Uncomment the following line if you do not want to check your keystore files in.
@@ -62,8 +63,17 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 app/libs/
-surfaceviewcamerarecording/libs/
-
-.idea/instapk.xml
 instapk.log*
 libs/
+
+.gitignore
+.hgignore
+.idea/
+build.gradle
+gradle/
+gradlew
+gradlew.bat
+instapk.properties
+proguard-rules.pro
+src/
+

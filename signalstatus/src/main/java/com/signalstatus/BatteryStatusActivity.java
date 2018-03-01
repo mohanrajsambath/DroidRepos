@@ -14,14 +14,6 @@ public class BatteryStatusActivity extends Activity {
 	
 	TextView textBatteryLevel = null;
 	String batteryLevelInfo = "Battery Level";
-	
-	public void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.battery);
-		textBatteryLevel = (TextView) findViewById(R.id.batterylevel);
-		registerBatteryLevelReceiver();
-	}
-	
 	/*
 	 * Subscription to the Battery related Broadcast events and update the appropriate UI controls
 	 * */
@@ -59,6 +51,13 @@ public class BatteryStatusActivity extends Activity {
 			}
 		}
 	};
+	
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.battery);
+		textBatteryLevel = findViewById(R.id.batterylevel);
+		registerBatteryLevelReceiver();
+	}
 
 	/*
 	 * Battery Plugged Information

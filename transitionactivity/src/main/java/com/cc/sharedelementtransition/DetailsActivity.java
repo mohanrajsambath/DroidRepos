@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -27,10 +25,10 @@ public class DetailsActivity extends Activity {
         mContact = Contact.getItem(getIntent().getIntExtra(ID, 0));
 
         // Views
-        mName = (TextView) findViewById(R.id.DETAILS_name);
-        mPhone = (TextView) findViewById(R.id.DETAILS_phone);
-        mCity = (TextView) findViewById(R.id.DETAILS_city);
-        mEmail = (TextView) findViewById(R.id.DETAILS_email);
+        mName = findViewById(R.id.DETAILS_name);
+        mPhone = findViewById(R.id.DETAILS_phone);
+        mCity = findViewById(R.id.DETAILS_city);
+        mEmail = findViewById(R.id.DETAILS_email);
         mCircle = findViewById(R.id.DETAILS_circle);
 
         // Data population

@@ -14,8 +14,8 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
     public RecyclerViewHolders(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
-        countryName = (TextView)itemView.findViewById(R.id.country_name);
-        countryPhoto = (ImageView)itemView.findViewById(R.id.country_photo);
+        countryName = itemView.findViewById(R.id.country_name);
+        countryPhoto = itemView.findViewById(R.id.country_photo);
     }
 
     @Override

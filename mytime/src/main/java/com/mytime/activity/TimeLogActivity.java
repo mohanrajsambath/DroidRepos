@@ -1,7 +1,7 @@
 package com.mytime.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextClock;
@@ -16,10 +16,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class TimeLogActivity extends AppCompatActivity  implements View.OnClickListener{
-    private Button button_In_Time,button_Out_Time,button_punch;
     TextView txtVw_val_status;
-    private boolean isChecked =false,isLogin=false;
     Stopwatch mSw=null;
+    private Button button_In_Time,button_Out_Time,button_punch;
+    private boolean isChecked =false,isLogin=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +40,15 @@ public class TimeLogActivity extends AppCompatActivity  implements View.OnClickL
 
     private void intiViews() {
         mSw= new Stopwatch();
-        button_In_Time =(Button)findViewById(R.id.button_In_Time);
-        button_Out_Time =(Button)findViewById(R.id.button_Out_Time);
-        button_punch =(Button)findViewById(R.id.button_punch);
-        txtVw_val_status =(TextView)findViewById(R.id.txtVw_val_status);
+        button_In_Time = findViewById(R.id.button_In_Time);
+        button_Out_Time = findViewById(R.id.button_Out_Time);
+        button_punch = findViewById(R.id.button_punch);
+        txtVw_val_status = findViewById(R.id.txtVw_val_status);
 
         button_In_Time.setOnClickListener(this);
         button_Out_Time.setOnClickListener(this);
         button_punch.setOnClickListener(this);
-        TextClock textClock = (TextClock) findViewById(R.id.textClock);
+        TextClock textClock = findViewById(R.id.textClock);
         textClock.setFormat12Hour(null);
         //textClock.setFormat24Hour("dd/MM/yyyy hh:mm:ss a");
         textClock.setFormat24Hour("hh:mm:ss a  EEE MMM d");

@@ -16,6 +16,37 @@ import com.cc.avi.indicators.AVLoadingIndicatorView;
 
 public class SampleActivity extends AppCompatActivity{
 
+    private static final String[] INDICATORS=new String[]{
+            "BallPulseIndicator",
+            "BallGridPulseIndicator",
+            "BallClipRotateIndicator",
+            "BallClipRotatePulseIndicator",
+            "SquareSpinIndicator",
+            "BallClipRotateMultipleIndicator",
+            "BallPulseRiseIndicator",
+            "BallRotateIndicator",
+            "CubeTransitionIndicator",
+            "BallZigZagIndicator",
+            "BallZigZagDeflectIndicator",
+            "BallTrianglePathIndicator",
+            "BallScaleIndicator",
+            "LineScaleIndicator",
+            "LineScalePartyIndicator",
+            "BallScaleMultipleIndicator",
+            "BallPulseSyncIndicator",
+            "BallBeatIndicator",
+            "LineScalePulseOutIndicator",
+            "LineScalePulseOutRapidIndicator",
+            "BallScaleRippleIndicator",
+            "BallScaleRippleMultipleIndicator",
+            "BallSpinFadeLoaderIndicator",
+            "LineSpinFadeLoaderIndicator",
+            "TriangleSkewSpinIndicator",
+            "PacmanIndicator",
+            "BallGridBeatIndicator",
+            "SemiCircleSpinIndicator",
+            "com.wang.avi.sample.MyCustomIndicator"
+    };
     private RecyclerView mRecycler;
 
     @Override
@@ -23,7 +54,7 @@ public class SampleActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
 
-        mRecycler= (RecyclerView) findViewById(R.id.recycler);
+        mRecycler= findViewById(R.id.recycler);
 
         GridLayoutManager layoutManager=new GridLayoutManager(this,4);
         mRecycler.setLayoutManager(layoutManager);
@@ -62,42 +93,8 @@ public class SampleActivity extends AppCompatActivity{
         public IndicatorHolder(View itemView) {
             super(itemView);
             itemLayout= itemView.findViewById(R.id.itemLayout);
-            indicatorView= (AVLoadingIndicatorView) itemView.findViewById(R.id.indicator);
+            indicatorView= itemView.findViewById(R.id.indicator);
         }
     }
-
-
-
-    private static final String[] INDICATORS=new String[]{
-            "BallPulseIndicator",
-            "BallGridPulseIndicator",
-            "BallClipRotateIndicator",
-            "BallClipRotatePulseIndicator",
-            "SquareSpinIndicator",
-            "BallClipRotateMultipleIndicator",
-            "BallPulseRiseIndicator",
-            "BallRotateIndicator",
-            "CubeTransitionIndicator",
-            "BallZigZagIndicator",
-            "BallZigZagDeflectIndicator",
-            "BallTrianglePathIndicator",
-            "BallScaleIndicator",
-            "LineScaleIndicator",
-            "LineScalePartyIndicator",
-            "BallScaleMultipleIndicator",
-            "BallPulseSyncIndicator",
-            "BallBeatIndicator",
-            "LineScalePulseOutIndicator",
-            "LineScalePulseOutRapidIndicator",
-            "BallScaleRippleIndicator",
-            "BallScaleRippleMultipleIndicator",
-            "BallSpinFadeLoaderIndicator",
-            "LineSpinFadeLoaderIndicator",
-            "TriangleSkewSpinIndicator",
-            "PacmanIndicator",
-            "BallGridBeatIndicator",
-            "SemiCircleSpinIndicator",
-            "com.wang.avi.sample.MyCustomIndicator"
-    };
 
 }

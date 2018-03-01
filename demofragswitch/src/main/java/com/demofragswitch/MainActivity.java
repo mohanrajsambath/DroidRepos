@@ -1,10 +1,10 @@
 package com.demofragswitch;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements FragmentChangeListener {
 
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChangeLis
 
     @Override
     public void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();;
+        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.mContainerId, fragment, fragment.toString());
         fragmentTransaction.addToBackStack(fragment.toString());

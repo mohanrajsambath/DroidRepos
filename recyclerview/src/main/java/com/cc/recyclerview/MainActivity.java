@@ -1,7 +1,7 @@
 package com.cc.recyclerview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(null);
 
-        Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
+        Toolbar topToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(topToolBar);
         topToolBar.setLogo(R.drawable.logo);
         topToolBar.setLogoDescription(getResources().getString(R.string.logo_desc));
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         List<ItemObject> rowListItem = getAllItemList();
         lLayout = new GridLayoutManager(MainActivity.this, 4);
 
-        RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
+        RecyclerView rView = findViewById(R.id.recycler_view);
         rView.setHasFixedSize(true);
         rView.setLayoutManager(lLayout);
 

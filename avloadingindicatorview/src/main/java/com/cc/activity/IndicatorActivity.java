@@ -21,7 +21,7 @@ public class IndicatorActivity extends AppCompatActivity{
         setContentView(R.layout.activity_indicator);
 
         String indicator=getIntent().getStringExtra("indicator");
-        avi= (AVLoadingIndicatorView) findViewById(R.id.avi);
+        avi= findViewById(R.id.avi);
         avi.setIndicator(indicator);
     }
 

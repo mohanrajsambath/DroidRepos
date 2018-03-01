@@ -21,37 +21,6 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
         private static final String TAG = "CameraTest";
         Camera mCamera;
         boolean mPreviewRunning = false;
-
-        @SuppressWarnings("deprecation")
-		public void onCreate(Bundle icicle){
-            super.onCreate(icicle);
-            Log.e(TAG, "onCreate");
-
-            getWindow().setFormat(PixelFormat.TRANSLUCENT);
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            setContentView(R.layout.cameraview);
-            ImageView img = (ImageView) findViewById(R.id.blankImage);
-            
-            if(CaptureCameraImage.isBlack)
-            	img.setBackgroundResource(android.R.color.black);
-            else
-            	img.setBackgroundResource(android.R.color.white);
-            
-            mSurfaceView = (SurfaceView) findViewById(R.id.surface_camera);
-            mSurfaceView.setOnClickListener(this);
-            mSurfaceHolder = mSurfaceView.getHolder();
-            mSurfaceHolder.addCallback(this);
-            mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-           
-        }
-
-        @Override
-        protected void onRestoreInstanceState(Bundle savedInstanceState){
-            super.onRestoreInstanceState(savedInstanceState);
-        }
-
-
         Camera.PictureCallback mPictureCallback = new Camera.PictureCallback() {
 
             public void onPictureTaken(byte[] data, Camera camera) {
@@ -86,7 +55,7 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
                          Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
                                  width, height, matrix, true);
                     	 CaptureCameraImage.image.setImageBitmap(resizedBitmap);
-                    	 
+
                      }catch(Exception e){
                     	 e.printStackTrace();
                      }
@@ -94,9 +63,40 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
                     //setResult(FOTO_MODE, mIntent);
                     setResult(585);
                     finish();
-                }       
+                }
             }
         };
+        private SurfaceView mSurfaceView;
+        private SurfaceHolder mSurfaceHolder;
+
+        @SuppressWarnings("deprecation")
+		public void onCreate(Bundle icicle){
+            super.onCreate(icicle);
+            Log.e(TAG, "onCreate");
+
+            getWindow().setFormat(PixelFormat.TRANSLUCENT);
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            setContentView(R.layout.cameraview);
+            ImageView img = findViewById(R.id.blankImage);
+
+            if(CaptureCameraImage.isBlack)
+            	img.setBackgroundResource(android.R.color.black);
+            else
+            	img.setBackgroundResource(android.R.color.white);
+
+            mSurfaceView = findViewById(R.id.surface_camera);
+            mSurfaceView.setOnClickListener(this);
+            mSurfaceHolder = mSurfaceView.getHolder();
+            mSurfaceHolder.addCallback(this);
+            mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+
+        }
+
+        @Override
+        protected void onRestoreInstanceState(Bundle savedInstanceState){
+            super.onRestoreInstanceState(savedInstanceState);
+        }
 
         protected void onResume(){
             Log.e(TAG, "onResume");
@@ -128,7 +128,7 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
 
             Camera.Parameters p = mCamera.getParameters();
             p.setPreviewSize(300, 300);
-            
+
             if(CaptureCameraImage.cameraID == 0){
             	String stringFlashMode = p.getFlashMode();
 	            if (stringFlashMode.equals("torch"))
@@ -136,7 +136,7 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
 	            else
 	                    p.setFlashMode("torch");
             }
-            
+
             mCamera.setParameters(p);
             try{
                 mCamera.setPreviewDisplay(holder);
@@ -155,9 +155,6 @@ public class CameraView extends Activity implements SurfaceHolder.Callback, OnCl
             //mPreviewRunning = false;
             //mCamera.release();
         }
-
-        private SurfaceView mSurfaceView;
-        private SurfaceHolder mSurfaceHolder;
 
         public void onClick(View v) {
             // TODO Auto-generated method stub

@@ -49,44 +49,24 @@ import java.util.List;
 public class AndroidCameraApi extends AppCompatActivity {
 
     private static final String TAG = "AndroidCameraApi";
-    private Button takePictureButton;
-    private TextureView textureView;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
+
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
         ORIENTATIONS.append(Surface.ROTATION_90, 0);
         ORIENTATIONS.append(Surface.ROTATION_180, 270);
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
-    private String cameraId;
+
     protected CameraDevice cameraDevice;
     protected CameraCaptureSession cameraCaptureSessions;
     protected CaptureRequest captureRequest;
     protected CaptureRequest.Builder captureRequestBuilder;
+    private Button takePictureButton;
+    private TextureView textureView;
+    private String cameraId;
     private Size imageDimension;
-    private ImageReader imageReader;
-    private File file;
-    private static final int REQUEST_CAMERA_PERMISSION = 200;
-    private boolean mFlashSupported;
-    private Handler mBackgroundHandler;
-    private HandlerThread mBackgroundThread;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android_camera_api);
-        textureView = (TextureView) findViewById(R.id.texture);
-        assert textureView != null;
-        textureView.setSurfaceTextureListener(textureListener);
-        takePictureButton = (Button) findViewById(R.id.btn_takepicture);
-        assert takePictureButton != null;
-        takePictureButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                takePicture();
-            }
-        });
-    }
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
@@ -105,7 +85,10 @@ public class AndroidCameraApi extends AppCompatActivity {
         public void onSurfaceTextureUpdated(SurfaceTexture surface) {
         }
     };
-
+    private ImageReader imageReader;
+    private File file;
+    private boolean mFlashSupported;
+    private Handler mBackgroundHandler;
     private final CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(CameraDevice camera) {
@@ -124,7 +107,6 @@ public class AndroidCameraApi extends AppCompatActivity {
             cameraDevice = null;
         }
     };
-
     final CameraCaptureSession.CaptureCallback captureCallbackListener = new CameraCaptureSession.CaptureCallback() {
         @Override
         public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request, TotalCaptureResult result) {
@@ -133,6 +115,24 @@ public class AndroidCameraApi extends AppCompatActivity {
             createCameraPreview();
         }
     };
+    private HandlerThread mBackgroundThread;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_android_camera_api);
+        textureView = findViewById(R.id.texture);
+        assert textureView != null;
+        textureView.setSurfaceTextureListener(textureListener);
+        takePictureButton = findViewById(R.id.btn_takepicture);
+        assert takePictureButton != null;
+        takePictureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takePicture();
+            }
+        });
+    }
 
     protected void startBackgroundThread() {
         mBackgroundThread = new HandlerThread("Camera Background");

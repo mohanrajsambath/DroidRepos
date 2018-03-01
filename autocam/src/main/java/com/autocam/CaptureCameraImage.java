@@ -1,15 +1,13 @@
 package com.autocam;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-//import android.support.design.widget.Snackbar;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -22,44 +20,38 @@ import android.widget.RadioButton;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission_group.CAMERA;
 
+//import android.support.design.widget.Snackbar;
+
 public class CaptureCameraImage extends AppCompatActivity  implements View.OnClickListener{
 
+	private static final int PERMISSION_REQUEST_CODE = 200;
 	public static int cameraID = 0;
 	public static boolean isBlack = true;
 	public static ImageView image;
-	private static final int PERMISSION_REQUEST_CODE = 200;
 	private View view;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitycapturecameraimage);
-        image = (ImageView) findViewById(R.id.imgView);
-		Button check_permission = (Button) findViewById(R.id.check_permission);
-		Button request_permission = (Button) findViewById(R.id.request_permission);
+        image = findViewById(R.id.imgView);
+		Button check_permission = findViewById(R.id.check_permission);
+		Button request_permission = findViewById(R.id.request_permission);
 		check_permission.setOnClickListener(this);
 		request_permission.setOnClickListener(this);
     }
 
     public void onFrontClick(View v){
-    	RadioButton rdbBlack = (RadioButton) findViewById(R.id.rdb_black);
-    	if(rdbBlack.isChecked()){
-    		isBlack = true;
-    	}else{
-    		isBlack = false;
-    	}
+    	RadioButton rdbBlack = findViewById(R.id.rdb_black);
+        isBlack = rdbBlack.isChecked();
 		cameraID = 1;
 		Intent i = new Intent(CaptureCameraImage.this,CameraView.class);
         startActivityForResult(i, 999);
 	}
     
 	public void onBackClick(View v){
-		RadioButton rdbBlack = (RadioButton) findViewById(R.id.rdb_black);
-    	if(rdbBlack.isChecked()){
-    		isBlack = true;
-    	}else{
-    		isBlack = false;
-    	}
+		RadioButton rdbBlack = findViewById(R.id.rdb_black);
+        isBlack = rdbBlack.isChecked();
     	cameraID = 0;
 		Intent i = new Intent(CaptureCameraImage.this,CameraView.class);
         startActivityForResult(i, 999);

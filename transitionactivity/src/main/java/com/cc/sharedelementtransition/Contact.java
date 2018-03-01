@@ -40,9 +40,6 @@ public class Contact {
         return mName.hashCode() + mPhone.hashCode();
     }
 
-    public static enum Field {
-        NAME, COLOR, PHONE, EMAIL, CITY
-    }
     public String get(Field f) {
         switch (f) {
             case COLOR: return mColor;
@@ -51,6 +48,9 @@ public class Contact {
             case CITY: return mCity;
             case NAME: default: return mName;
         }
+    }
+    public enum Field {
+        NAME, COLOR, PHONE, EMAIL, CITY
     }
 
 }

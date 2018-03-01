@@ -52,8 +52,8 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         super(view);
         mView = view;
 
-        mIdView = (TextView) view.findViewById(R.id.list_id);
-        mTitleView = (TextView) view.findViewById(R.id.list_title);
+        mIdView = view.findViewById(R.id.list_id);
+        mTitleView = view.findViewById(R.id.list_title);
     }
 
     @Override
