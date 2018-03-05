@@ -123,7 +123,7 @@ public class SplashActivity extends AppCompatActivity {
     private void goNext(){
         Intent io = new Intent(SplashActivity.this,MainActivity.class);
         startActivity(io);
-        finish();
+        //finish();
     }
 
 }
