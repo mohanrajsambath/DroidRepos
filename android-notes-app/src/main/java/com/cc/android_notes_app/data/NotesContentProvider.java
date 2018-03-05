@@ -46,11 +46,6 @@ public class NotesContentProvider extends ContentProvider {
      */
     private static final int ONE_ITEM = 20;
 
-    /**
-     * The database helper for this content provider
-     */
-    private DatabaseHelper databaseHelper;
-
     /*
      * Initialize the UriMatcher with the URIs that this content provider handles
      */
@@ -64,6 +59,11 @@ public class NotesContentProvider extends ContentProvider {
                 NotesContentContract.Notes.ITEM_BASEPATH,
                 ONE_ITEM);
     }
+
+    /**
+     * The database helper for this content provider
+     */
+    private DatabaseHelper databaseHelper;
 
     /**
      * Part of the Content Provider interface.  The system calls onCreate() when it starts up

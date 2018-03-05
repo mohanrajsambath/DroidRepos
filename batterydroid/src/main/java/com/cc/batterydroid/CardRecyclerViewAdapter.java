@@ -1,5 +1,6 @@
 package com.bradleege.batterydroid;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.support.v7.widget.CardView;
+
 import com.bradleege.batterydroid.data.CardData;
+
 import java.util.ArrayList;
 import java.util.List;
 

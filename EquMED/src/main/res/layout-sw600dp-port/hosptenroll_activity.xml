@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,10 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:visibility="gone"
         android:text="No hospital details found"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:visibility="gone"/>
     <ScrollView
         android:id="@+id/scroll_main_hospital"
         android:layout_width="match_parent"
@@ -530,10 +528,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.815"
                     android:checked="false"
-                    android:textOn="Yes"
-                    android:textOff="No"
                     android:paddingLeft="5dp"
-                    android:paddingRight="5dp"/>
+                    android:paddingRight="5dp"
+                    android:textOff="No"
+                    android:textOn="Yes"/>
 
                 <TextView
                     android:id="@+id/txtVw_standard_equipmentsYesNo"
@@ -603,13 +601,13 @@
                         android:background="#c8c8c8"
                         android:visibility="invisible"/>
                     <TextView
+                        android:id="@+id/status_hosp"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dip"
                         android:layout_weight="0.4"
                         android:gravity="center"
                         android:text="Status"
-                        android:id="@+id/status_hosp"
-                        android:layout_marginLeft="-10dip"
                         android:textColor="#ffffff"/>
                     <View
                         android:layout_width="1dp"
@@ -618,13 +616,13 @@
                         android:visibility="invisible"/>
 
                     <TextView
+                        android:id="@+id/update_hosp"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="center"
-                        android:id="@+id/update_hosp"
-                        android:text="Update"
                         android:paddingRight="2dip"
+                        android:text="Update"
                         android:textColor="#ffffff"/>
 
                     <View

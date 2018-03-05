@@ -19,12 +19,12 @@
 
 
     <TextView
+        android:id="@+id/version_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
         android:padding="5dp"
         android:text="Version Information"
-        android:id="@+id/version_information"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="italic"/>
@@ -42,10 +42,10 @@
 
 
         <TextView
+            android:id="@+id/txtVw_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Version              "
-            android:id="@+id/txtVw_version"
             android:textColor="#000"
             android:textSize="14sp"/>
 
@@ -78,10 +78,10 @@
 
 
         <TextView
+            android:id="@+id/txtVw_BuildNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Build Number   "
-            android:id="@+id/txtVw_BuildNo"
             android:textColor="#000"
             android:textSize="14sp"/>
 
@@ -148,10 +148,10 @@
 
 
         <TextView
+            android:id="@+id/txtVw_LicenseType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="License Type    "
-            android:id="@+id/txtVw_LicenseType"
             android:textColor="#000"
             android:textSize="14sp"/>
 
@@ -182,10 +182,10 @@
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/txtVw_released"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Released On     "
-            android:id="@+id/txtVw_released"
             android:textColor="#000"
             android:textSize="14sp"/>
 
@@ -217,10 +217,10 @@
 
 
         <TextView
+            android:id="@+id/txtVw_ExpiredOn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Expired On        "
-            android:id="@+id/txtVw_ExpiredOn"
             android:textColor="#000"
             android:textSize="14sp"/>
 

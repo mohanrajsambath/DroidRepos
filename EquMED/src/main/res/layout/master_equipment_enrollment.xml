@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -109,11 +107,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.815"
-                    android:textOn="Yes"
-                    android:textOff="No"
                     android:checked="false"
                     android:paddingLeft="5dp"
-                    android:paddingRight="5dp"/>
+                    android:paddingRight="5dp"
+                    android:textOff="No"
+                    android:textOn="Yes"/>
 
                 <TextView
                     android:id="@+id/txtVw_isstandardYesNo"
@@ -134,8 +132,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lLayout_EqImage"
                 android:orientation="horizontal"
-                android:visibility="gone"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/txtVw_EqImg"
@@ -214,11 +212,11 @@
                         android:background="#c8c8c8"
                         android:visibility="gone"/>
                     <TextView
-                        android:layout_width="0dip" android:layout_height="wrap_content"
+                        android:id="@+id/update_equip1" android:layout_width="0dip"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="center"
                         android:paddingLeft="4dip"
-                        android:id="@+id/update_equip1"
                         android:text="Update"
 
                         android:textColor="#ffffff"/>

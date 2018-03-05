@@ -1,8 +1,9 @@
 package com.cc.avi.indicators;
 
 
-import android.view.animation.LinearInterpolator;
 import android.animation.ValueAnimator;
+import android.view.animation.LinearInterpolator;
+
 import java.util.ArrayList;
 
 /**

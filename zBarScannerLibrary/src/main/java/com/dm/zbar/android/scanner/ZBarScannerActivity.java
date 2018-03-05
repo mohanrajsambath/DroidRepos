@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
+
 import net.sourceforge.zbar.Config;
 import net.sourceforge.zbar.Image;
 import net.sourceforge.zbar.ImageScanner;
@@ -18,15 +19,29 @@ import net.sourceforge.zbar.SymbolSet;
 public class ZBarScannerActivity extends Activity implements Camera.PreviewCallback, ZBarConstants {
 
     private static final String TAG = "ZBarScannerActivity";
+
+    static {
+        System.loadLibrary("iconv");
+    }
+
     private CameraPreview mPreview;
     private Camera mCamera;
     private ImageScanner mScanner;
     private Handler mAutoFocusHandler;
     private boolean mPreviewing = true;
-
-    static {
-        System.loadLibrary("iconv");
-    }
+    private Runnable doAutoFocus = new Runnable() {
+        public void run() {
+            if(mCamera != null && mPreviewing) {
+                mCamera.autoFocus(autoFocusCB);
+            }
+        }
+    };
+    // Mimic continuous auto-focusing
+    Camera.AutoFocusCallback autoFocusCB = new Camera.AutoFocusCallback() {
+        public void onAutoFocus(boolean success, Camera camera) {
+            mAutoFocusHandler.postDelayed(doAutoFocus, 1000);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,20 +171,4 @@ public class ZBarScannerActivity extends Activity implements Camera.PreviewCallb
         setResult(Activity.RESULT_CANCELED, dataIntent);
         finish();
     }
-
-
-    private Runnable doAutoFocus = new Runnable() {
-        public void run() {
-            if(mCamera != null && mPreviewing) {
-                mCamera.autoFocus(autoFocusCB);
-            }
-        }
-    };
-
-    // Mimic continuous auto-focusing
-    Camera.AutoFocusCallback autoFocusCB = new Camera.AutoFocusCallback() {
-        public void onAutoFocus(boolean success, Camera camera) {
-            mAutoFocusHandler.postDelayed(doAutoFocus, 1000);
-        }
-    };
 }

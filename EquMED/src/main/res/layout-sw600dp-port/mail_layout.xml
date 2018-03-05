@@ -97,8 +97,8 @@
         android:id="@+id/btnSendMail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         android:text="Send"
-        android:textColor="#fff"
-        android:background="@color/colorPrimary"/>
+        android:textColor="#fff"/>
 
 </LinearLayout>

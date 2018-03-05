@@ -8,8 +8,8 @@
         android:id="@+id/lLayout_inflate_hospitallist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="35dp"
         android:background="#ffffff"
+        android:minHeight="35dp"
         android:orientation="horizontal">
 
         <View

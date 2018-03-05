@@ -7,8 +7,8 @@
         android:id="@+id/lLayout_inflate_hospitallist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="35dp"
         android:background="#ffffff"
+        android:minHeight="35dp"
         android:orientation="horizontal">
 
         <View
@@ -72,8 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text=""
                 android:padding="2dip"
+                android:text=""
                 android:textColor="#000000"/>
         </LinearLayout>
         <View

@@ -1,9 +1,8 @@
 package com.cc.activity;
 
+import android.animation.ValueAnimator;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-
-import android.animation.ValueAnimator;
 
 import com.cc.avi.indicators.Indicator;
 

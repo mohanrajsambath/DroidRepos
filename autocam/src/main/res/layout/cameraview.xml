@@ -11,10 +11,10 @@
         android:layout_height="fill_parent"
     />
     <ImageView 
-        android:layout_width="fill_parent" 
+        android:id="@+id/blankImage"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/black"
-        android:contentDescription="@string/app_name"   
-        android:id="@+id/blankImage" 	
+        android:contentDescription="@string/app_name"
     />      
 </RelativeLayout>

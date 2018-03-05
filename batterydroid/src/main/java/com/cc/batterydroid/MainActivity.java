@@ -22,7 +22,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import com.bradleege.batterydroid.data.CardData;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {

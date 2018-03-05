@@ -20,9 +20,9 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true"
             android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
             >
 
 
@@ -31,18 +31,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:visibility="gone"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="5dp"
+                android:visibility="gone"/>
             <TextView
                 android:id="@+id/txt_adminTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Welcome Administrator"
-                android:textColor="#000"
                 android:layout_centerInParent="true"
-                android:gravity="center_vertical"
                 android:layout_marginRight="25dp"
                 android:layout_toLeftOf="@+id/imgVw_lout"
+                android:gravity="center_vertical"
+                android:text="Welcome Administrator"
+                android:textColor="#000"
                 android:textSize="16sp"/>
 
 
@@ -132,8 +132,8 @@
                 android:paddingLeft="5dp"
                 android:text="Hospital / Equipment"
                 android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_userCreation"
@@ -158,11 +158,11 @@
                 android:drawableRight="@drawable/right_arroww"
                 android:gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:visibility="gone"
                 android:text="Add Medical Equipment"
                 android:textAllCaps="false"
+                android:textColor="#fff"
                 android:textSize="16sp"
-                android:textColor="#fff" />
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn_viewMedical"
@@ -174,8 +174,8 @@
                 android:paddingLeft="5dp"
                 android:text="Medical Equipment"
                 android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
 
         </LinearLayout>

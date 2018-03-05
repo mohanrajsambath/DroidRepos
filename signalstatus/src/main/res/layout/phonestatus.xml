@@ -2,18 +2,18 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:scrollbarStyle="insideOverlay"
-        android:scrollbarAlwaysDrawVerticalTrack="false">
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbarStyle="insideOverlay">
  <LinearLayout 
-        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
                 <!--Service State-->
                 <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/tvServiceState" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/tvServiceState"/>
                         <TextView android:id="@+id/serviceState_info" style="@style/textStyle"/>
                 </LinearLayout>
                 <!--cell location -->
@@ -21,7 +21,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/tvCellLocation" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/tvCellLocation"/>
                         <TextView android:id="@+id/cellLocation_info" style="@style/textStyle"/>
                 </LinearLayout>
                 <!--Call State-->
@@ -29,7 +29,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/tvCallState" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/tvCallState"/>
                         <TextView android:id="@+id/callState_info" style="@style/textStyle"/>
                 </LinearLayout>
                 <!--Data Connection State-->
@@ -37,7 +37,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/tvConnState" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/tvConnState"/>
                         <TextView android:id="@+id/connectionState_info" style="@style/textStyle"/>
                 </LinearLayout>
                 <!--Signal leve -->
@@ -45,7 +45,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/tvSignalLevel" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/tvSignalLevel"/>
                         <LinearLayout
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <TextView android:text="@string/strData" style="@style/labelStyleRight"/>
+                        <TextView style="@style/labelStyleRight" android:text="@string/strData"/>
                         <ImageView android:id="@+id/dataDirection" style="@style/imageStyle"/>
                 </LinearLayout>
                 <TextView android:id="@+id/device_info" style="@style/labelStyleLeft"/>

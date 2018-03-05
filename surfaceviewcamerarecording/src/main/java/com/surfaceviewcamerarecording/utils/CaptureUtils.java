@@ -6,12 +6,6 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.util.Log;
 
-
-import com.surfaceviewcamerarecording.activity.CamActivity;
-
-import java.io.IOException;
-import java.util.List;
-
 public class CaptureUtils {
 
     // //////////////////////////////////////////////////////////////////////
@@ -19,9 +13,8 @@ public class CaptureUtils {
     // //////////////////////////////////////////////////////////////////////
    // private Camera mCamera;
 
-    private int currentOrientation = 90;
-
     int activeCamera = 0;
+    private int currentOrientation = 90;
     private MediaRecorder mMediaRecorder;
 
     // //////////////////////////////////////////////////////////////////////
@@ -167,15 +160,6 @@ try {
 //        return reqSize;
 //    }
 
-    public static class PictureSize {
-        public int width;
-        public int height;
-    }
-
-    // //////////////////////////////////////////////////////////////////////
-    // Private methods
-    // //////////////////////////////////////////////////////////////////////
-
     @SuppressWarnings("deprecation")
     @SuppressLint("NewApi")
     private void initCamera() {
@@ -191,6 +175,15 @@ try {
 //            toggleFlash(true);
 //
 //        }
+    }
+
+    // //////////////////////////////////////////////////////////////////////
+    // Private methods
+    // //////////////////////////////////////////////////////////////////////
+
+    public static class PictureSize {
+        public int width;
+        public int height;
     }
 
 }

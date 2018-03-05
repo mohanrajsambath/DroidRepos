@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -57,9 +56,9 @@
                                 android:layout_weight="1.63"
                                 android:background="@drawable/rect_edittext"
                                 android:ems="5"
+                                android:focusableInTouchMode="false"
                                 android:imeOptions="actionNext"
                                 android:inputType="text|textNoSuggestions"
-                                android:focusableInTouchMode="false"
                                 android:paddingLeft="5dp"
                                 android:paddingRight="5dp"
                                 android:singleLine="true"
@@ -90,9 +89,9 @@
                                 android:layout_weight="1.63"
                                 android:background="@drawable/rect_edittext"
                                 android:ems="5"
+                                android:focusableInTouchMode="false"
                                 android:imeOptions="actionDone"
                                 android:inputType="text|textNoSuggestions"
-                                android:focusableInTouchMode="false"
                                 android:paddingLeft="5dp"
                                 android:paddingRight="5dp"
                                 android:singleLine="true"
@@ -126,10 +125,10 @@
                             android:layout_weight="1.63"
                             android:background="@drawable/rect_edittext"
                             android:ems="5"
+                            android:focusableInTouchMode="false"
                             android:hint="Service Date and Time"
                             android:imeOptions="actionNext"
                             android:inputType="text|textNoSuggestions"
-                            android:focusableInTouchMode="false"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
                             android:singleLine="true"
@@ -344,10 +343,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="0.815"
                             android:checked="false"
-                            android:textOff="No"
-                            android:textOn = "Yes"
                             android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                            android:paddingRight="5dp"
+                            android:textOff="No"
+                            android:textOn = "Yes" />
 
                         <TextView
                             android:id="@+id/txtVw_serviceYesNo"
@@ -470,10 +469,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.63"
-                            android:editable="false"
-                            android:focusableInTouchMode="false"
                             android:background="@drawable/rect_edittext"
+                            android:editable="false"
                             android:ems="5"
+                            android:focusableInTouchMode="false"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
                             android:singleLine="true"
@@ -502,10 +501,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.63"
-                            android:editable="false"
-                            android:focusableInTouchMode="false"
                             android:background="@drawable/rect_edittext"
+                            android:editable="false"
                             android:ems="5"
+                            android:focusableInTouchMode="false"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
                             android:singleLine="true"
@@ -518,10 +517,10 @@
             </ScrollView>
 
             <LinearLayout
+                android:id="@+id/service_manage_hos_eq_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/service_manage_hos_eq_name"
                 android:visibility="gone">
 
                 <LinearLayout

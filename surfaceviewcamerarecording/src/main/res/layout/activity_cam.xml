@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/black"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/black">
 
     <RelativeLayout
         android:id="@+id/rlPreview"
@@ -56,8 +54,8 @@
             android:clickable="true"
             android:onClick="cancelClick"
             android:padding="5dp"
-            android:visibility="gone"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -103,8 +101,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="bottom"
+        android:orientation="vertical"
         >
 
         <SeekBar
@@ -163,13 +161,13 @@
                 android:visibility="visible">
 
                 <ImageView
-                    android:visibility="gone"
                     android:id="@+id/ivGallery"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:clickable="false"
                     android:onClick="selectFromGallery"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/typefaceTextView1"

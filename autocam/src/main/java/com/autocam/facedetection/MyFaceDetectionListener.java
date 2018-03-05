@@ -2,7 +2,6 @@ package com.autocam.facedetection;
 
 import android.graphics.Rect;
 import android.hardware.Camera;
-import android.hardware.camera2.params.Face;
 import android.util.Log;
 
 import java.util.ArrayList;

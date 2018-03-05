@@ -29,9 +29,9 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:text="No Users Found"
-        android:visibility="gone"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <ScrollView
         android:id="@+id/scr_adduser"
@@ -63,8 +63,8 @@
                         android:id="@+id/txtVw_userPhoto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Profile Photo"
                         android:layout_centerVertical="true"
+                        android:text="Profile Photo"
                         android:textColor="#000000"/>
                 </RelativeLayout>
 
@@ -72,9 +72,9 @@
                     android:id="@+id/imgVw_userPhoto"
                     android:layout_width="0dp"
                     android:layout_height="250dip"
-                    android:minHeight="150dp"
                     android:layout_weight="1.63"
                     android:background="@drawable/rect_edittext"
+                    android:minHeight="150dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/userimage"/>
             </LinearLayout>
@@ -198,9 +198,9 @@
                 <Spinner
                     android:id="@+id/country_spinner"
                     android:layout_width="0dp"
-                    android:layout_weight="1.5"
-                    android:layout_marginLeft="40dp"
                     android:layout_height="25dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1.5"
                     android:dropDownWidth="200dp"/>
 
                 <EditText
@@ -209,14 +209,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.63"
                     android:background="@drawable/rect_edittext"
+                    android:digits="+0123456789"
                     android:ems="5"
                     android:inputType="phone"
-                    android:digits="+0123456789"
                     android:maxLength="15"
-                    android:text="+675"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:singleLine="true"
+                    android:text="+675"
                     android:textSize="15dip">
 
                 </EditText>
@@ -467,8 +467,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:visibility="gone"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/txtVw_admin"
@@ -580,8 +580,8 @@
 
 
                     <TextView
-                        android:layout_width="0dip"
                         android:id="@+id/assign"
+                        android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:gravity="center"
@@ -589,11 +589,11 @@
                         android:textColor="#ffffff"/>
 
                     <CheckBox
+                        android:id="@+id/chkbox_select_hos"
                         android:layout_width="0dip"
-                        android:layout_weight="0.2"
                         android:layout_height="wrap_content"
-                        android:buttonTint="#ffffff"
-                        android:id="@+id/chkbox_select_hos" />
+                        android:layout_weight="0.2"
+                        android:buttonTint="#ffffff" />
 
                 </LinearLayout>
 

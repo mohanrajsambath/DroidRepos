@@ -11,8 +11,8 @@
         android:id="@+id/txtVw_documentNo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center_vertical"
+        android:layout_weight="1"
         android:text="Attachment 1"
         android:textColor="#000000" />
 
@@ -20,12 +20,12 @@
         android:id="@+id/eTxt_medical_attDoc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_weight="1.6"
         android:ems="5"
         android:focusableInTouchMode="false"
         android:imeOptions="actionNext"
         android:inputType="text"
-        android:layout_gravity="center_vertical"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:textSize="15dip">

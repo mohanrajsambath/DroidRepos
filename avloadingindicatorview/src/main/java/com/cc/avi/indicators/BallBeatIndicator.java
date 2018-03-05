@@ -14,14 +14,12 @@ public class BallBeatIndicator extends Indicator {
     public static final float SCALE=1.0f;
 
     public static final int ALPHA=255;
-
-    private float[] scaleFloats=new float[]{SCALE,
-            SCALE,
-            SCALE};
-
     int[] alphas=new int[]{ALPHA,
             ALPHA,
             ALPHA,};
+    private float[] scaleFloats=new float[]{SCALE,
+            SCALE,
+            SCALE};
 
     @Override
     public void draw(Canvas canvas, Paint paint) {

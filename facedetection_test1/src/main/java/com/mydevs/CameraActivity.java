@@ -3,7 +3,6 @@
 
 package com.mydevs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.hardware.Camera;
 import android.hardware.Camera.Face;
@@ -24,30 +23,22 @@ public class CameraActivity extends AppCompatActivity
         implements SurfaceHolder.Callback {
 
     public static final String TAG = CameraActivity.class.getSimpleName();
-
+    // Log all errors:
+    private final CameraErrorCallback mErrorCallback = new CameraErrorCallback();
     private Camera mCamera;
-
     // We need the phone orientation to correctly draw the overlay:
     private int mOrientation;
     private int mOrientationCompensation;
     private OrientationEventListener mOrientationEventListener;
-
     // Let's keep track of the display rotation and orientation also:
     private int mDisplayRotation;
     private int mDisplayOrientation;
-
     // Holds the Face Detection result:
     private Face[] mFaces;
-
     // The surface view for the camera data
     private SurfaceView mView;
-
     // Draw rectangles and other fancy stuff:
     private FaceOverlayView mFaceView;
-
-    // Log all errors:
-    private final CameraErrorCallback mErrorCallback = new CameraErrorCallback();
-
     /**
      * Sets the faces for the overlay view, so it can be updated
      * and the face overlays will be drawn again.

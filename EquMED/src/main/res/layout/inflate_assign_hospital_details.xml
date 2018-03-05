@@ -8,8 +8,8 @@
         android:id="@+id/lLayout_inflate_hospitallist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="35dp"
         android:background="#ffffff"
+        android:minHeight="35dp"
         android:orientation="horizontal">
 
         <View
@@ -58,10 +58,10 @@
             android:background="#c8c8c8" />
 
         <RelativeLayout
+            android:id="@+id/rel_check_box"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
-            android:id="@+id/rel_check_box"
             android:orientation="horizontal">
 
 

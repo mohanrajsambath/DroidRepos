@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -55,8 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lLayout_eqpmnt_id"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
+                android:orientation="horizontal"
                 android:padding="2dp">
 
                 <TextView
@@ -113,10 +112,10 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:paddingLeft="5dp"
-                    android:visibility="visible"
                     android:paddingRight="5dp"
                     android:singleLine="true"
-                    android:textSize="15dip">
+                    android:textSize="15dip"
+                    android:visibility="visible">
 
                 </EditText>
             </LinearLayout>
@@ -141,11 +140,11 @@
                     android:id="@+id/eTxt_gpsCoordnts"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
                     android:layout_weight="1.63"
                     android:background="@drawable/rect_edittext"
-                    android:ems="5"
-                    android:layout_marginLeft="60dp"
                     android:editable="false"
+                    android:ems="5"
                     android:hint="GPS Coordinates"
                     android:imeOptions="actionNext"
                     android:inputType="text"
@@ -158,8 +157,8 @@
                 <ImageButton
                     android:id="@+id/btn_getLocation"
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="27dp"
+                    android:layout_weight="0.5"
                     android:background="@drawable/latlong"/>
             </LinearLayout>
             <LinearLayout
@@ -182,10 +181,10 @@
                     android:id="@+id/eTxt_serialNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
                     android:layout_weight="1.63"
                     android:background="@drawable/rect_edittext"
                     android:ems="5"
-                    android:layout_marginLeft="60dp"
                     android:hint="Serial No"
                     android:imeOptions="actionNext"
                     android:inputType="text"
@@ -198,8 +197,8 @@
                 <ImageButton
                     android:id="@+id/btn_scan_barcode"
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="27dp"
+                    android:layout_weight="0.5"
                     android:background="@drawable/barcode"/>
 
             </LinearLayout>
@@ -852,8 +851,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lLayout_worCond"
-                android:orientation="horizontal"
                 android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
                 android:padding="2dp">
 
                 <LinearLayout
@@ -944,8 +943,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lLayout_me_createdBy"
-                android:orientation="horizontal"
                 android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
                 android:padding="2dp">
 
                 <LinearLayout

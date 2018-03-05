@@ -25,15 +25,17 @@ public class AVLoadingIndicatorView extends View {
 
     private static final int MIN_SHOW_TIME = 500; // ms
     private static final int MIN_DELAY = 500; // ms
-
+    int mMinWidth;
+    int mMaxWidth;
+    int mMinHeight;
+    int mMaxHeight;
     private long mStartTime = -1;
-
     private boolean mPostedHide = false;
-
     private boolean mPostedShow = false;
-
     private boolean mDismissed = false;
-
+    private Indicator mIndicator;
+    private int mIndicatorColor;
+    private boolean mShouldStartAnimationDrawable;
     private final Runnable mDelayedHide = new Runnable() {
 
         @Override
@@ -43,7 +45,6 @@ public class AVLoadingIndicatorView extends View {
             setVisibility(View.GONE);
         }
     };
-
     private final Runnable mDelayedShow = new Runnable() {
 
         @Override
@@ -55,16 +56,6 @@ public class AVLoadingIndicatorView extends View {
             }
         }
     };
-
-    int mMinWidth;
-    int mMaxWidth;
-    int mMinHeight;
-    int mMaxHeight;
-
-    private Indicator mIndicator;
-    private int mIndicatorColor;
-
-    private boolean mShouldStartAnimationDrawable;
 
     public AVLoadingIndicatorView(Context context) {
         super(context);
@@ -113,42 +104,6 @@ public class AVLoadingIndicatorView extends View {
         return mIndicator;
     }
 
-    public void setIndicator(Indicator d) {
-        if (mIndicator != d) {
-            if (mIndicator != null) {
-                mIndicator.setCallback(null);
-                unscheduleDrawable(mIndicator);
-            }
-
-            mIndicator = d;
-            //need to set indicator color again if you didn't specified when you update the indicator .
-            setIndicatorColor(mIndicatorColor);
-            if (d != null) {
-                d.setCallback(this);
-            }
-            postInvalidate();
-        }
-    }
-
-
-    /**
-     * setIndicatorColor(0xFF00FF00)
-     * or
-     * setIndicatorColor(Color.BLUE)
-     * or
-     * setIndicatorColor(Color.parseColor("#FF4081"))
-     * or
-     * setIndicatorColor(0xFF00FF00)
-     * or
-     * setIndicatorColor(getResources().getColor(android.R.color.black))
-     * @param color
-     */
-    public void setIndicatorColor(int color){
-        this.mIndicatorColor=color;
-        mIndicator.setColor(color);
-    }
-
-
     /**
      * You should pay attention to pass this parameter with two way:
      * for example:
@@ -180,6 +135,40 @@ public class AVLoadingIndicatorView extends View {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setIndicator(Indicator d) {
+        if (mIndicator != d) {
+            if (mIndicator != null) {
+                mIndicator.setCallback(null);
+                unscheduleDrawable(mIndicator);
+            }
+
+            mIndicator = d;
+            //need to set indicator color again if you didn't specified when you update the indicator .
+            setIndicatorColor(mIndicatorColor);
+            if (d != null) {
+                d.setCallback(this);
+            }
+            postInvalidate();
+        }
+    }
+
+    /**
+     * setIndicatorColor(0xFF00FF00)
+     * or
+     * setIndicatorColor(Color.BLUE)
+     * or
+     * setIndicatorColor(Color.parseColor("#FF4081"))
+     * or
+     * setIndicatorColor(0xFF00FF00)
+     * or
+     * setIndicatorColor(getResources().getColor(android.R.color.black))
+     * @param color
+     */
+    public void setIndicatorColor(int color){
+        this.mIndicatorColor=color;
+        mIndicator.setColor(color);
     }
 
     public void smoothToShow(){

@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lLayout_message"
     android:layout_width="fill_parent"
-    android:minWidth="250dp"
     android:layout_height="match_parent"
     android:background="@drawable/shapealert"
+    android:minWidth="250dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/lLayoutDialog_wrnty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dip">
+        android:layout_marginBottom="10dip"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_wrnty_dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_margin="10dp"
+            android:gravity="center"
             android:text="f"
             android:textColor="#000000"
             android:textSize="18dp"
@@ -47,8 +47,8 @@
             android:id="@+id/txt_wrnty_range"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:layout_marginTop="5dip"
+            android:text=""
             android:textColor="#000000"
             android:textSize="13dp"
             ></TextView>

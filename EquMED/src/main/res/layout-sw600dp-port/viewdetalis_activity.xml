@@ -29,10 +29,10 @@
         android:layout_below="@+id/appBarLayout_userMaster"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:visibility="gone"
         android:text="No Medical Equipment Details Found"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:id="@+id/rL_PopupBtn"

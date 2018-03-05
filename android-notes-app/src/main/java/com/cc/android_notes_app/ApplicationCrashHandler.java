@@ -24,14 +24,14 @@ import java.io.Writer;
 public class ApplicationCrashHandler implements Thread.UncaughtExceptionHandler {
     private Thread.UncaughtExceptionHandler defaultHandler;
 
+    private ApplicationCrashHandler() {
+        this.defaultHandler = Thread.getDefaultUncaughtExceptionHandler();
+    }
+
     public static void installHandler() {
         if (!(Thread.getDefaultUncaughtExceptionHandler() instanceof ApplicationCrashHandler)) {
             Thread.setDefaultUncaughtExceptionHandler(new ApplicationCrashHandler());
         }
-    }
-
-    private ApplicationCrashHandler() {
-        this.defaultHandler = Thread.getDefaultUncaughtExceptionHandler();
     }
 
     @Override

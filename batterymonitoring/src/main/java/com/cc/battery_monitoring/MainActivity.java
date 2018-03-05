@@ -18,33 +18,6 @@ public class MainActivity extends AppCompatActivity {
     TextView textView1,textView2,battery_percentage;
     ImageView image,imgVw_BatteryStatus;
     Animation animationBlink;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        animationBlink = AnimationUtils.loadAnimation(this, R.anim.blink);
-
-        image = (ImageView)findViewById(R.id.battery);
-        imgVw_BatteryStatus = (ImageView)findViewById(R.id.imgVw_BatteryStatus);
-
-        // Get the application context
-        Context = getApplicationContext();
-
-        // Initialize a new IntentFilter instance
-        IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-
-        // Register the broadcast receiver
-        Context.registerReceiver(mBroadcastReceiver,iFilter);
-
-        // Get the widgets reference from XML main
-        battery_percentage = (TextView) findViewById(R.id.battey_percentage);
-        textView1 = (TextView) findViewById(R.id.textView1);
-        textView2 = (TextView) findViewById(R.id.textView2);
-
-    }
-
     private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -224,5 +197,31 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        animationBlink = AnimationUtils.loadAnimation(this, R.anim.blink);
+
+        image = (ImageView)findViewById(R.id.battery);
+        imgVw_BatteryStatus = (ImageView)findViewById(R.id.imgVw_BatteryStatus);
+
+        // Get the application context
+        Context = getApplicationContext();
+
+        // Initialize a new IntentFilter instance
+        IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+
+        // Register the broadcast receiver
+        Context.registerReceiver(mBroadcastReceiver,iFilter);
+
+        // Get the widgets reference from XML main
+        battery_percentage = (TextView) findViewById(R.id.battey_percentage);
+        textView1 = (TextView) findViewById(R.id.textView1);
+        textView2 = (TextView) findViewById(R.id.textView2);
+
+    }
 
 }

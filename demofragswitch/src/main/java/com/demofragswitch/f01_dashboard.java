@@ -25,7 +25,7 @@ public class f01_dashboard extends Fragment implements  View.OnClickListener {
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        button_Dashboard=(Button)dashboard_Frag.findViewById(R.id.button_Dashboard);
+        button_Dashboard= dashboard_Frag.findViewById(R.id.button_Dashboard);
         button_Dashboard.setOnClickListener(this);
     }
 

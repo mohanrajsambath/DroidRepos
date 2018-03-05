@@ -21,9 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtVw_ServerConfiguration"
+        android:layout_marginLeft="15dip"
         android:layout_marginTop="18dp"
         android:text="Enter Server IP With Port"
-        android:layout_marginLeft="15dip"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000" />
 
@@ -34,11 +34,11 @@
         android:layout_below="@+id/txtVw__enterIP"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
-        android:singleLine="true"
-        android:background="@drawable/rect_edittext"
         android:layout_marginTop="10dp"
-        android:text="http://"
+        android:background="@drawable/rect_edittext"
         android:padding="5dip"
+        android:singleLine="true"
+        android:text="http://"
         android:textColor="#000"
         android:textSize="14sp" />
 
@@ -48,8 +48,8 @@
         android:id="@+id/btn_Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/eTxt_IP"
         android:layout_alignParentRight="true"
+        android:layout_below="@+id/eTxt_IP"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/save"
         />
@@ -57,8 +57,8 @@
         android:id="@+id/btn_Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/eTxt_IP"
         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/eTxt_IP"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/clear"
         android:visibility="visible"/>

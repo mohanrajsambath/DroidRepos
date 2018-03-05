@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -27,7 +26,7 @@ public class f02_signup extends Fragment implements  View.OnClickListener{
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        button_SignUp=(Button)signup_Frag.findViewById(R.id.button_SignUp);
+        button_SignUp= signup_Frag.findViewById(R.id.button_SignUp);
         button_SignUp.setOnClickListener(this);
 
     }

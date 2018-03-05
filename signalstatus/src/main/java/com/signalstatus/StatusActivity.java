@@ -1,9 +1,8 @@
 package com.signalstatus;
 
-import android.os.Bundle;
 import android.app.TabActivity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 

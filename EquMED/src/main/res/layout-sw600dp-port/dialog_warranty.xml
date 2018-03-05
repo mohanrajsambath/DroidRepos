@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lLayout_message"
     android:layout_width="fill_parent"
-    android:minWidth="250dp"
     android:layout_height="match_parent"
     android:background="@drawable/shapealert"
+    android:minWidth="250dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/lLayoutDialog_wrnty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dip">
+        android:layout_marginBottom="10dip"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_wrnty_dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_margin="10dp"
+            android:gravity="center"
             android:text=""
             android:textColor="#000000"
             android:textSize="20dp"
@@ -47,9 +47,9 @@
             android:id="@+id/txt_wrnty_range"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
             android:text=""
             android:textColor="#000000"
-            android:layout_marginTop="5dip"
             android:textSize="15dp"
             ></TextView>
         <LinearLayout
@@ -66,8 +66,8 @@
                 android:layout_height="30dp"
                 android:background="@color/colorDashButton_600"
                 android:clickable="true"
-                android:textSize="15sp"
                 android:textColor="#fff"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <Button
@@ -77,8 +77,8 @@
                 android:layout_marginLeft="5dp"
                 android:background="#1B5E20"
                 android:clickable="true"
-                android:textSize="15sp"
                 android:textColor="#fff"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
