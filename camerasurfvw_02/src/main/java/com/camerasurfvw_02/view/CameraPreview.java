@@ -1,8 +1,5 @@
 package com.camerasurfvw_02.view;
 
-import java.io.IOException;
-import java.util.List;
-
 import android.content.Context;
 import android.hardware.Camera;
 import android.util.Log;
@@ -10,17 +7,14 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import java.io.IOException;
+import java.util.List;
+
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
 	private SurfaceHolder mHolder;
 	private Camera mCamera;
 	private ZoomCallback zoomCallback = null;
 	private float mDist = 0;
-
-	public interface ZoomCallback {
-		public void onZoomChanged(int progress);
-	}
-
-
 
 	public CameraPreview(Context context, Camera camera) {
 		super(context);
@@ -84,8 +78,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
 	}
 
-//Methods and Action Need to Handle the Zoom
-
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// Get the pointer ID
@@ -119,6 +111,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 		return true;
 	}
 
+//Methods and Action Need to Handle the Zoom
 
 	private void handleZoom(MotionEvent event, Camera.Parameters params) {
 		int maxZoom = params.getMaxZoom();
@@ -143,7 +136,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
 		Log.e("Zoom", "MAX :" + maxZoom + "Zoom %" + (zoom * 100 / maxZoom));
 	}
-
 
 	public void handleFocus(MotionEvent event, Camera.Parameters params) {
 
@@ -180,5 +172,9 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
 	public void setOnZoomCallback(ZoomCallback zoomCallback) {
 		this.zoomCallback = zoomCallback;
+	}
+
+	public interface ZoomCallback {
+		void onZoomChanged(int progress);
 	}
 }

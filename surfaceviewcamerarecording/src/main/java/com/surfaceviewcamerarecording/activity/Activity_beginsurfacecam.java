@@ -36,16 +36,16 @@ import java.io.IOException;
 import java.util.List;
 
 public class Activity_beginsurfacecam extends AppCompatActivity implements SurfaceHolder.Callback{
+    private final String VIDEO_PATH_NAME = "/mnt/sdcard/SRFrec_1.mp4";
+    public Camera camera;
+    public boolean isRecord = false;
+    ImageButton btnCapture;
+    RelativeLayout pCameraLayout;
     private SurfaceView preview = null;
     private SurfaceHolder previewHolder = null;
-    public Camera camera;
     private boolean inPreview = false;
-    ImageButton btnCapture;
     private ZoomControls zoomControls;
-    RelativeLayout pCameraLayout;
-    public boolean isRecord = false;
     private boolean mInitSuccesful = false;
-    private final String VIDEO_PATH_NAME = "/mnt/sdcard/SRFrec_1.mp4";
     private MediaRecorder mMediaRecorder;
 
 
@@ -55,8 +55,8 @@ public class Activity_beginsurfacecam extends AppCompatActivity implements Surfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.begin_surface_cam_layout);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        preview = (SurfaceView) findViewById(R.id.surface);
-        pCameraLayout = (RelativeLayout) findViewById(R.id.pCameraLayout);
+        preview = findViewById(R.id.surface);
+        pCameraLayout = findViewById(R.id.pCameraLayout);
         previewHolder = preview.getHolder();
         previewHolder.addCallback(this);
         previewHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
@@ -64,7 +64,7 @@ public class Activity_beginsurfacecam extends AppCompatActivity implements Surfa
                 .getDefaultDisplay().getWidth(), getWindow().getWindowManager()
                 .getDefaultDisplay().getHeight());
 
-        btnCapture = (ImageButton) findViewById(R.id.btnCapture);
+        btnCapture = findViewById(R.id.btnCapture);
         enableZoom();
 
         btnCapture.setOnClickListener(new View.OnClickListener() {

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         /*http://hrm.ibotsystems.com/app/?g=modules&n=dashboard&m=module_Personal_Information*/
 
-        wv1=(WebView)findViewById(R.id.webView1);
+        wv1= findViewById(R.id.webView1);
         wv1.setWebViewClient(new MyBrowser());
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setJavaScriptEnabled(true);

@@ -42,33 +42,28 @@ public class NoteDetailFragment extends Fragment {
      * represents.
      */
     public static final String ARG_ITEM_ID = "noteId";
-
-    /**
-     * The dummy content this fragment is presenting.
-     */
-    private Note mItem;
-    private Uri itemUri;
-
-    /**
-     * Content Resolver
-     */
-    private ContentResolver contentResolver;
-
-    /**
-     * Is this an insert or an update?
-     */
-    private boolean isUpdate;
-
     /**
      * The component bindings
      */
     EditText editTitle;
     EditText editContent;
-
     /**
      * The timer for saving the record back to SQL
      */
     Handler timer = new Handler();
+    /**
+     * The dummy content this fragment is presenting.
+     */
+    private Note mItem;
+    private Uri itemUri;
+    /**
+     * Content Resolver
+     */
+    private ContentResolver contentResolver;
+    /**
+     * Is this an insert or an update?
+     */
+    private boolean isUpdate;
     Runnable timerTask = new Runnable() {
         @Override
         public void run() {
@@ -171,8 +166,8 @@ public class NoteDetailFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.note_detail, container, false);
 
         // Update the text in the editor
-        editTitle = (EditText) rootView.findViewById(R.id.edit_title);
-        editContent = (EditText) rootView.findViewById(R.id.edit_content);
+        editTitle = rootView.findViewById(R.id.edit_title);
+        editContent = rootView.findViewById(R.id.edit_content);
 
         editTitle.setText(mItem.getTitle());
         editContent.setText(mItem.getContent());

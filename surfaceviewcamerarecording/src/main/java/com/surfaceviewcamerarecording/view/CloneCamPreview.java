@@ -2,46 +2,28 @@ package com.surfaceviewcamerarecording.view;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
-import android.content.res.Configuration;
 import android.hardware.Camera;
 import android.media.MediaRecorder;
 import android.os.Build;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import com.surfaceviewcamerarecording.activity.Clone_MainActivity;
 
 import java.io.IOException;
 import java.util.List;
 
 @SuppressLint("NewApi")
 public class CloneCamPreview extends SurfaceView implements SurfaceHolder.Callback {
+    private final String VIDEO_PATH_NAME = "/mnt/sdcard/AND_Rec_1.mp4";
     protected Camera mCamera;
-    private SurfaceHolder mHolder;
     protected Activity mActivity;
     protected boolean mInitSuccesful = false;
     protected MediaRecorder mMediaRecorder;
+    protected List<Camera.Size> mPreviewSizeList;
+    private SurfaceHolder mHolder;
     private CloneCamPreview.LayoutMode mLayoutMode;
     private int mCameraId;
-    private final String VIDEO_PATH_NAME = "/mnt/sdcard/AND_Rec_1.mp4";
     private int mCenterPosX = -1;
     private int mCenterPosY;
-    protected List<Camera.Size> mPreviewSizeList;
-
-
-    public static enum LayoutMode {
-        FitToParent, // Scale to the size that no side is larger than the parent
-        NoBlank // Scale to the size that no side is smaller than the parent
-    }
 
 
     public CloneCamPreview(Activity activity, int cameraId, CloneCamPreview.LayoutMode mode) {
@@ -70,7 +52,6 @@ public class CloneCamPreview extends SurfaceView implements SurfaceHolder.Callba
         mPreviewSizeList = cameraParams.getSupportedPreviewSizes();
     }
 
-
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
@@ -82,7 +63,6 @@ public class CloneCamPreview extends SurfaceView implements SurfaceHolder.Callba
         }
 
     }
-
 
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
@@ -102,6 +82,11 @@ public class CloneCamPreview extends SurfaceView implements SurfaceHolder.Callba
     public void setCenterPosition(int x, int y) {
         mCenterPosX = x;
         mCenterPosY = y;
+    }
+
+    public enum LayoutMode {
+        FitToParent, // Scale to the size that no side is larger than the parent
+        NoBlank // Scale to the size that no side is smaller than the parent
     }
 
 

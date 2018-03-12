@@ -3,14 +3,54 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidRepos.iml" filepath="$PROJECT_DIR$/DroidRepos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" filepath="$PROJECT_DIR$/activitycustanimation/activitycustanimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-notes-app/android-notes-app.iml" filepath="$PROJECT_DIR$/android-notes-app/android-notes-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apple/apple.iml" filepath="$PROJECT_DIR$/apple/apple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" filepath="$PROJECT_DIR$/apsfacedetection/apsfacedetection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autocam/autocam.iml" filepath="$PROJECT_DIR$/autocam/autocam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" filepath="$PROJECT_DIR$/avloadingindicatorview/avloadingindicatorview.iml" />
       <module fileurl="file://$PROJECT_DIR$/aws/aws.iml" filepath="$PROJECT_DIR$/aws/aws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batterydata/batterydata.iml" filepath="$PROJECT_DIR$/batterydata/batterydata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batterydroid/batterydroid.iml" filepath="$PROJECT_DIR$/batterydroid/batterydroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batterymonitoring/batterymonitoring.iml" filepath="$PROJECT_DIR$/batterymonitoring/batterymonitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" filepath="$PROJECT_DIR$/camerasurfvw_02/camerasurfvw_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demofragswitch/demofragswitch.iml" filepath="$PROJECT_DIR$/demofragswitch/demofragswitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynarecycleview/dynarecycleview.iml" filepath="$PROJECT_DIR$/dynarecycleview/dynarecycleview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edittextdyanmic/edittextdyanmic.iml" filepath="$PROJECT_DIR$/edittextdyanmic/edittextdyanmic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emailautocomplete/emailautocomplete.iml" filepath="$PROJECT_DIR$/emailautocomplete/emailautocomplete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventsapp/eventsapp.iml" filepath="$PROJECT_DIR$/eventsapp/eventsapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exoplayer/exoplayer.iml" filepath="$PROJECT_DIR$/exoplayer/exoplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fabstrokeapp/fabstrokeapp.iml" filepath="$PROJECT_DIR$/fabstrokeapp/fabstrokeapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facedetection_test1/facedetection_test1.iml" filepath="$PROJECT_DIR$/facedetection_test1/facedetection_test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firebasetest/firebasetest.iml" filepath="$PROJECT_DIR$/firebasetest/firebasetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm/hrm.iml" filepath="$PROJECT_DIR$/hrm/hrm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkedin-sdk/linkedin-sdk.iml" filepath="$PROJECT_DIR$/linkedin-sdk/linkedin-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mpermission/mpermission.iml" filepath="$PROJECT_DIR$/mpermission/mpermission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myfbsharing/myfbsharing.iml" filepath="$PROJECT_DIR$/myfbsharing/myfbsharing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myfbsharing2/myfbsharing2.iml" filepath="$PROJECT_DIR$/myfbsharing2/myfbsharing2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mylinkshareapp/mylinkshareapp.iml" filepath="$PROJECT_DIR$/mylinkshareapp/mylinkshareapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytime/mytime.iml" filepath="$PROJECT_DIR$/mytime/mytime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytweetshareapp/mytweetshareapp.iml" filepath="$PROJECT_DIR$/mytweetshareapp/mytweetshareapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nocamera/nocamera.iml" filepath="$PROJECT_DIR$/nocamera/nocamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/percentagelayout/percentagelayout.iml" filepath="$PROJECT_DIR$/percentagelayout/percentagelayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/permissions/permissions.iml" filepath="$PROJECT_DIR$/permissions/permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/readsqlite/readsqlite.iml" filepath="$PROJECT_DIR$/readsqlite/readsqlite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retroapp/retroapp.iml" filepath="$PROJECT_DIR$/retroapp/retroapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rndwebview/rndwebview.iml" filepath="$PROJECT_DIR$/rndwebview/rndwebview.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" filepath="$PROJECT_DIR$/runtimepermissions/runtimepermissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sampleapp/sampleapp.iml" filepath="$PROJECT_DIR$/sampleapp/sampleapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/segmentseekbar/segmentseekbar.iml" filepath="$PROJECT_DIR$/segmentseekbar/segmentseekbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signalstatus/signalstatus.iml" filepath="$PROJECT_DIR$/signalstatus/signalstatus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlitetransaction/sqlitetransaction.iml" filepath="$PROJECT_DIR$/sqlitetransaction/sqlitetransaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" filepath="$PROJECT_DIR$/surfaceviewcamerarecording/surfaceviewcamerarecording.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testgitignore/testgitignore.iml" filepath="$PROJECT_DIR$/testgitignore/testgitignore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/togglepassword/togglepassword.iml" filepath="$PROJECT_DIR$/togglepassword/togglepassword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transitionactivity/transitionactivity.iml" filepath="$PROJECT_DIR$/transitionactivity/transitionactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/twitterloginsample/twitterloginsample.iml" filepath="$PROJECT_DIR$/twitterloginsample/twitterloginsample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videofacedetection/videofacedetection.iml" filepath="$PROJECT_DIR$/videofacedetection/videofacedetection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wifidirectfiletransfer/wifidirectfiletransfer.iml" filepath="$PROJECT_DIR$/wifidirectfiletransfer/wifidirectfiletransfer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zBarScannerLibrary/zBarScannerLibrary.iml" filepath="$PROJECT_DIR$/zBarScannerLibrary/zBarScannerLibrary.iml" />
     </modules>
   </component>
 </project>

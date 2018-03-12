@@ -39,6 +39,17 @@ public class Note {
     private DateTime updated;
 
     /**
+     * Create a new blank note
+     */
+    public Note() {
+        setNoteId(UUID.randomUUID().toString());
+        setTitle("");
+        setContent("");
+        setCreated(DateTime.now(DateTimeZone.UTC));
+        setUpdated(DateTime.now(DateTimeZone.UTC));
+    }
+
+    /**
      * Create a new Note from a Cursor object.  This version provides default values for
      * any information that is missing; hopefully, this ensures that the method never crashes
      * the app.
@@ -89,17 +100,6 @@ public class Note {
         } else {
             return defaultValue;
         }
-    }
-
-    /**
-     * Create a new blank note
-     */
-    public Note() {
-        setNoteId(UUID.randomUUID().toString());
-        setTitle("");
-        setContent("");
-        setCreated(DateTime.now(DateTimeZone.UTC));
-        setUpdated(DateTime.now(DateTimeZone.UTC));
     }
 
     /**

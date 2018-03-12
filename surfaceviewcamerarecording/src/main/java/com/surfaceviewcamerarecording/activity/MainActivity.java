@@ -20,6 +20,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback,View.OnClickListener,GestureDetector.OnGestureListener{
     //private final String VIDEO_PATH_NAME = "/mnt/sdcard/VGA_30fps_512vbrate.mp4";
     private final String VIDEO_PATH_NAME = "/mnt/sdcard/SRFrec_1.mp4";
+    public boolean isRecord = false;
     private MediaRecorder mMediaRecorder;
     private Camera mCamera;
     private SurfaceView mSurfaceView;
@@ -27,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private View mToggleButton;
     private ImageView imgVw_recording;
     private boolean mInitSuccesful = false;
-    public boolean isRecord = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         // we shall take the video in landscape orientation
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        mSurfaceView = (SurfaceView) findViewById(R.id.surfaceView);
+        mSurfaceView = findViewById(R.id.surfaceView);
         mHolder = mSurfaceView.getHolder();
         mHolder.addCallback(this);
         mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-        imgVw_recording = (ImageView) findViewById(R.id.imgVw_recording);
+        imgVw_recording = findViewById(R.id.imgVw_recording);
         imgVw_recording.setOnClickListener(this);
 
         //mCamera(true);

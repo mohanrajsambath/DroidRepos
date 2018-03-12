@@ -1,7 +1,5 @@
 package com.cc.aws;
 
-import android.app.ListActivity;
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ListActivity;
@@ -10,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
@@ -31,14 +30,14 @@ import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferType;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
+import com.aws.R;
+import com.cc.aws.s3transferutility.Constants;
 
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import com.aws.R;
-import com.cc.aws.s3transferutility.Constants;
 
 
  /*
@@ -93,6 +92,30 @@ public class UploadActivity extends ListActivity {
     // Which row in the UI is currently checked (if any)
     private int checkedIndex;
 
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is ExternalStorageProvider.
+     */
+    public static boolean isExternalStorageDocument(Uri uri) {
+        return "com.android.externalstorage.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is DownloadsProvider.
+     */
+    public static boolean isDownloadsDocument(Uri uri) {
+        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is MediaProvider.
+     */
+    public static boolean isMediaDocument(Uri uri) {
+        return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,6 +126,7 @@ public class UploadActivity extends ListActivity {
         transferRecordMaps = new ArrayList<HashMap<String, Object>>();
         initUI();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -187,7 +211,7 @@ public class UploadActivity extends ListActivity {
                         return true;
                     case R.id.textState:
                         TextView state = (TextView) view;
-                        state.setText(((TransferState) data).toString());
+                        state.setText(data.toString());
                         return true;
                     case R.id.textPercentage:
                         TextView percentage = (TextView) view;
@@ -216,14 +240,14 @@ public class UploadActivity extends ListActivity {
             }
         });
 
-        btnUploadFile = (Button) findViewById(R.id.buttonUploadFile);
-        btnUploadImage = (Button) findViewById(R.id.buttonUploadImage);
-        btnPause = (Button) findViewById(R.id.buttonPause);
-        btnResume = (Button) findViewById(R.id.buttonResume);
-        btnCancel = (Button) findViewById(R.id.buttonCancel);
-        btnDelete = (Button) findViewById(R.id.buttonDelete);
-        btnPauseAll = (Button) findViewById(R.id.buttonPauseAll);
-        btnCancelAll = (Button) findViewById(R.id.buttonCancelAll);
+        btnUploadFile = findViewById(R.id.buttonUploadFile);
+        btnUploadImage = findViewById(R.id.buttonUploadImage);
+        btnPause = findViewById(R.id.buttonPause);
+        btnResume = findViewById(R.id.buttonResume);
+        btnCancel = findViewById(R.id.buttonCancel);
+        btnDelete = findViewById(R.id.buttonDelete);
+        btnPauseAll = findViewById(R.id.buttonPauseAll);
+        btnCancelAll = findViewById(R.id.buttonCancelAll);
 
         btnUploadFile.setOnClickListener(new OnClickListener() {
             @Override
@@ -382,7 +406,6 @@ public class UploadActivity extends ListActivity {
         }
     }
 
-
     /*
     * Updates the ListView according to the observers.
     */
@@ -408,7 +431,6 @@ public class UploadActivity extends ListActivity {
         btnCancel.setEnabled(availability);
         btnDelete.setEnabled(availability);
     }
-
 
     /*
      * Begins to upload the file specified by the file path.
@@ -486,30 +508,6 @@ public class UploadActivity extends ListActivity {
             return uri.getPath();
         }
         return null;
-    }
-
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is ExternalStorageProvider.
-     */
-    public static boolean isExternalStorageDocument(Uri uri) {
-        return "com.android.externalstorage.documents".equals(uri.getAuthority());
-    }
-
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is DownloadsProvider.
-     */
-    public static boolean isDownloadsDocument(Uri uri) {
-        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
-    }
-
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is MediaProvider.
-     */
-    public static boolean isMediaDocument(Uri uri) {
-        return "com.android.providers.media.documents".equals(uri.getAuthority());
     }
 
     /*

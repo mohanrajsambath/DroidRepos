@@ -4,24 +4,16 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
-
 
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
@@ -30,6 +22,11 @@ import com.amazonaws.mobileconnectors.s3.transferutility.TransferType;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
 import com.aws.R;
 import com.cc.aws.s3transferutility.Constants;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 
@@ -162,7 +159,7 @@ public class DownloadActivity extends ListActivity {
                         return true;
                     case R.id.textState:
                         TextView state = (TextView) view;
-                        state.setText(((TransferState) data).toString());
+                        state.setText(data.toString());
                         return true;
                     case R.id.textPercentage:
                         TextView percentage = (TextView) view;
@@ -192,13 +189,13 @@ public class DownloadActivity extends ListActivity {
 
 
 
-        btnDownload = (Button) findViewById(R.id.buttonDownload);
-        btnPause = (Button) findViewById(R.id.buttonPause);
-        btnResume = (Button) findViewById(R.id.buttonResume);
-        btnCancel = (Button) findViewById(R.id.buttonCancel);
-        btnDelete = (Button) findViewById(R.id.buttonDelete);
-        btnPauseAll = (Button) findViewById(R.id.buttonPauseAll);
-        btnCancelAll = (Button) findViewById(R.id.buttonCancelAll);
+        btnDownload = findViewById(R.id.buttonDownload);
+        btnPause = findViewById(R.id.buttonPause);
+        btnResume = findViewById(R.id.buttonResume);
+        btnCancel = findViewById(R.id.buttonCancel);
+        btnDelete = findViewById(R.id.buttonDelete);
+        btnPauseAll = findViewById(R.id.buttonPauseAll);
+        btnCancelAll = findViewById(R.id.buttonCancelAll);
 
         // Launches an activity for the user to select an object in their S3
         // bucket to download
