@@ -21,45 +21,31 @@ import java.util.List;
 
 @SuppressLint("NewApi")
 public class CamPreview extends SurfaceView implements SurfaceHolder.Callback, GestureDetector.OnGestureListener {
-    private static boolean DEBUGGING = false;
     //private static final String LOG_TAG = CamPreview.class.getSimpleName();
     private static final String CAMERA_PARAM_ORIENTATION = "orientation";
     private static final String CAMERA_PARAM_LANDSCAPE = "landscape";
     private static final String CAMERA_PARAM_PORTRAIT = "portrait";
+    private static boolean DEBUGGING = false;
     protected Activity mActivity;
-    private SurfaceHolder mHolder;
     protected Camera mCamera;
     protected List<Camera.Size> mPreviewSizeList;
     protected List<Camera.Size> mPictureSizeList;
     protected Camera.Size mPreviewSize;
     protected Camera.Size mPictureSize;
+    /**
+     * State flag: true when surface's layout size is set and surfaceChanged()
+     * process has not been completed.
+     */
+    protected boolean mSurfaceConfiguring = false;
+    PreviewReadyCallback mPreviewReadyCallback = null;
+    private SurfaceHolder mHolder;
     private int mSurfaceChangedCallDepth = 0;
     private int mCameraId;
     private LayoutMode mLayoutMode;
     private int mCenterPosX = -1;
     private int mCenterPosY;
     private float mDist = 0;
-    PreviewReadyCallback mPreviewReadyCallback = null;
     private ZoomCallback zoomCallback = null;
-
-    public static enum LayoutMode {
-        FitToParent, // Scale to the size that no side is larger than the parent
-        NoBlank // Scale to the size that no side is smaller than the parent
-    }
-
-    public interface PreviewReadyCallback {
-        public void onPreviewReady();
-    }
-
-    public interface ZoomCallback {
-        public void onZoomChanged(int progress);
-    }
-
-    /**
-     * State flag: true when surface's layout size is set and surfaceChanged()
-     * process has not been completed.
-     */
-    protected boolean mSurfaceConfiguring = false;
 
     public CamPreview(Activity activity, int cameraId, LayoutMode mode) {
         super(activity); // Always necessary
@@ -178,7 +164,6 @@ public class CamPreview extends SurfaceView implements SurfaceHolder.Callback, G
         double y = event.getY(0) - event.getY(1);
         return (float) Math.sqrt(x * x + y * y);
     }
-
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
@@ -491,7 +476,6 @@ public class CamPreview extends SurfaceView implements SurfaceHolder.Callback, G
         return mCamera;
     }
 
-
     @Override
     public boolean onDown(MotionEvent e) {
         return true;
@@ -583,5 +567,18 @@ public class CamPreview extends SurfaceView implements SurfaceHolder.Callback, G
             }
         }
 
+    }
+
+    public enum LayoutMode {
+        FitToParent, // Scale to the size that no side is larger than the parent
+        NoBlank // Scale to the size that no side is smaller than the parent
+    }
+
+    public interface PreviewReadyCallback {
+        void onPreviewReady();
+    }
+
+    public interface ZoomCallback {
+        void onZoomChanged(int progress);
     }
 }

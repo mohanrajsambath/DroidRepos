@@ -19,12 +19,12 @@ import com.surfaceviewcamerarecording.utils.CaptureUtils;
 
 public class Clone_MainActivity extends AppCompatActivity {
 
+    ImageButton imageButton1;
    // CamPreview mPreview;
     private int activeCamera = 0;
     private RelativeLayout previewParent;
     private LinearLayout blackTop, blackBottom;
     private boolean isRecording = false;
-    ImageButton imageButton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +41,10 @@ public class Clone_MainActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     void InitControls() {
 
-        previewParent = (RelativeLayout) findViewById(R.id.rlPreview_clone);
-        blackTop = (LinearLayout) findViewById(R.id.llBlackTop);
-        blackBottom = (LinearLayout) findViewById(R.id.llBlackBottom);
-        imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
+        previewParent = findViewById(R.id.rlPreview_clone);
+        blackTop = findViewById(R.id.llBlackTop);
+        blackBottom = findViewById(R.id.llBlackBottom);
+        imageButton1 = findViewById(R.id.imageButton1);
 
 
     }

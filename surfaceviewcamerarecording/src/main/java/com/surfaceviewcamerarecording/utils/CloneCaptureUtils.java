@@ -11,14 +11,12 @@ import java.util.List;
 
 public class CloneCaptureUtils {
 
+	int activeCamera = 0;
 	// //////////////////////////////////////////////////////////////////////
 	// Fields
 	// //////////////////////////////////////////////////////////////////////
 	private Camera mCamera;
-
 	private int currentOrientation = 90;
-
-	int activeCamera = 0;
 
 	// //////////////////////////////////////////////////////////////////////
 	// Public methods
@@ -83,7 +81,7 @@ public class CloneCaptureUtils {
 
 	public boolean isCameraFlashAvailable() {
 		Camera.Parameters p = mCamera.getParameters();
-		return p.getFlashMode() == null ? false : true;
+		return p.getFlashMode() != null;
 	}
 
 	public boolean isCameraFlashEnabled() {
@@ -157,15 +155,6 @@ public class CloneCaptureUtils {
 		return reqSize;
 	}
 
-	public static class PictureSize {
-		public int width;
-		public int height;
-	}
-
-	// //////////////////////////////////////////////////////////////////////
-	// Private methods
-	// //////////////////////////////////////////////////////////////////////
-
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
 	private void initCamera() {
@@ -181,6 +170,15 @@ public class CloneCaptureUtils {
 			toggleFlash(true);
 
 		}
+	}
+
+	// //////////////////////////////////////////////////////////////////////
+	// Private methods
+	// //////////////////////////////////////////////////////////////////////
+
+	public static class PictureSize {
+		public int width;
+		public int height;
 	}
 
 }

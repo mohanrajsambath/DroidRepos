@@ -1,13 +1,11 @@
 package com.cc.aws;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.view.View.OnClickListener;
-import android.content.Intent;
+import android.widget.Button;
 
 import com.aws.R;
 
@@ -39,8 +37,8 @@ public class Aws_HomeActivity extends AppCompatActivity {
     }
 
     private void initUI() {
-        btnDownload = (Button)findViewById(R.id.buttonDownloadMain);
-        btnUpload = (Button)findViewById(R.id.buttonUploadMain);
+        btnDownload = findViewById(R.id.buttonDownloadMain);
+        btnUpload = findViewById(R.id.buttonUploadMain);
         btnDownload.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {

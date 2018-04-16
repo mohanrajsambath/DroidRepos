@@ -29,8 +29,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/cancel_all"
-            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintLeft_toRightOf="@+id/buttonPauseAll"
             app:layout_constraintRight_toRightOf="parent" />
     </android.support.constraint.ConstraintLayout>

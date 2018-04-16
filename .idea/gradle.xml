@@ -8,14 +8,54 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/activitycustanimation" />
             <option value="$PROJECT_DIR$/android-notes-app" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/apple" />
+            <option value="$PROJECT_DIR$/apsfacedetection" />
+            <option value="$PROJECT_DIR$/autocam" />
+            <option value="$PROJECT_DIR$/avloadingindicatorview" />
             <option value="$PROJECT_DIR$/aws" />
+            <option value="$PROJECT_DIR$/batterydata" />
+            <option value="$PROJECT_DIR$/batterydroid" />
+            <option value="$PROJECT_DIR$/batterymonitoring" />
             <option value="$PROJECT_DIR$/camerasurfvw_02" />
+            <option value="$PROJECT_DIR$/demofragswitch" />
+            <option value="$PROJECT_DIR$/dynarecycleview" />
+            <option value="$PROJECT_DIR$/edittextdyanmic" />
+            <option value="$PROJECT_DIR$/emailautocomplete" />
+            <option value="$PROJECT_DIR$/eventsapp" />
+            <option value="$PROJECT_DIR$/exoplayer" />
+            <option value="$PROJECT_DIR$/fabstrokeapp" />
+            <option value="$PROJECT_DIR$/facedetection_test1" />
+            <option value="$PROJECT_DIR$/firebasetest" />
             <option value="$PROJECT_DIR$/hrm" />
+            <option value="$PROJECT_DIR$/linkedin-sdk" />
+            <option value="$PROJECT_DIR$/mpermission" />
+            <option value="$PROJECT_DIR$/myfbsharing" />
+            <option value="$PROJECT_DIR$/myfbsharing2" />
+            <option value="$PROJECT_DIR$/mylinkshareapp" />
             <option value="$PROJECT_DIR$/mytime" />
+            <option value="$PROJECT_DIR$/mytweetshareapp" />
+            <option value="$PROJECT_DIR$/nocamera" />
+            <option value="$PROJECT_DIR$/percentagelayout" />
+            <option value="$PROJECT_DIR$/permissions" />
+            <option value="$PROJECT_DIR$/readsqlite" />
+            <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/retroapp" />
+            <option value="$PROJECT_DIR$/rndwebview" />
             <option value="$PROJECT_DIR$/runtimepermissions" />
+            <option value="$PROJECT_DIR$/sampleapp" />
+            <option value="$PROJECT_DIR$/segmentseekbar" />
+            <option value="$PROJECT_DIR$/signalstatus" />
+            <option value="$PROJECT_DIR$/sqlitetransaction" />
             <option value="$PROJECT_DIR$/surfaceviewcamerarecording" />
+            <option value="$PROJECT_DIR$/testgitignore" />
+            <option value="$PROJECT_DIR$/togglepassword" />
+            <option value="$PROJECT_DIR$/transitionactivity" />
+            <option value="$PROJECT_DIR$/twitterloginsample" />
+            <option value="$PROJECT_DIR$/videofacedetection" />
+            <option value="$PROJECT_DIR$/wifidirectfiletransfer" />
+            <option value="$PROJECT_DIR$/zBarScannerLibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
